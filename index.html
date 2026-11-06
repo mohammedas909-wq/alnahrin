@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>النهرين — مكائن ومواد الإعلان | Al-Nahrain</title>
+<meta name="description" content="النهرين — بيع مكائن ومعدات الإعلان وقطع غيارها ومواد تجهيز الإعلان في العراق | Al-Nahrain sign-making machines and materials, Iraq">
+<meta name="theme-color" content="#101820">
+<link rel="icon" type="image/png" href="assets/img/452dd46c02f87175012c47942e375813.png">
+<link rel="stylesheet" href="assets/nahrain.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=Readex+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.sec-off{display:none!important}
+/* ===== الافتتاحية ===== */
+.hero{position:relative;margin-top:-72px;min-height:900px;overflow:hidden;isolation:isolate;color:#fff;background:linear-gradient(165deg,#101820 0%,#0F2232 55%,#0B2F46 100%);display:flex;align-items:center}
+.glow{position:absolute;width:760px;height:760px;border-radius:50%;background:radial-gradient(circle,rgba(0,155,213,.4),rgba(0,155,213,0) 64%);filter:blur(18px);z-index:-1;animation:glowMove 16s ease-in-out infinite alternate}
+.haze{position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(234,246,252,.14),transparent 65%);filter:blur(20px);z-index:-1;animation:glowMove 22s ease-in-out infinite alternate-reverse}
+@keyframes glowMove{0%{transform:translate(0,0)}50%{transform:translate(-140px,70px)}100%{transform:translate(90px,-50px)}}
+.beam{position:absolute;top:-30%;width:40%;height:150%;z-index:-1;background:conic-gradient(from 180deg at 50% 0%,transparent 0deg,rgba(0,155,213,.18) 11deg,transparent 24deg);transform-origin:50% 0;filter:blur(4px);animation:beam 13s ease-in-out infinite alternate}
+@keyframes beam{from{transform:rotate(-16deg)}to{transform:rotate(16deg)}}
+.floor{position:absolute;inset-inline:-30%;bottom:-2px;height:42%;z-index:-1;background-image:linear-gradient(rgba(0,155,213,.24) 1px,transparent 1px),linear-gradient(90deg,rgba(0,155,213,.24) 1px,transparent 1px);background-size:64px 64px;transform:perspective(700px) rotateX(64deg);transform-origin:bottom;-webkit-mask-image:linear-gradient(to top,#000 10%,transparent 85%);mask-image:linear-gradient(to top,#000 10%,transparent 85%);animation:floorMove 7s linear infinite}
+@keyframes floorMove{from{background-position:0 0}to{background-position:0 64px}}
+.logo-rv{position:relative;width:112px;color:#fff;animation:logoRv 1.8s var(--ease) .9s both}
+@keyframes logoRv{0%{clip-path:inset(100% 0 0 0);filter:blur(14px);transform:scale(1.15) translateY(10px);opacity:0}55%{opacity:1}100%{clip-path:inset(0 0 0 0);filter:blur(0);transform:none;opacity:1}}
+.logo-rv::after{content:"";position:absolute;inset:0;-webkit-mask:url(assets/img/452dd46c02f87175012c47942e375813.png) center/contain no-repeat;mask:url(assets/img/452dd46c02f87175012c47942e375813.png) center/contain no-repeat;background:linear-gradient(105deg,transparent 35%,#BFE8F8 50%,transparent 65%);background-size:300% 100%;background-position:100% 0;animation:shine 2.2s ease 2.4s both}
+@keyframes shine{from{background-position:100% 0}to{background-position:-60% 0}}
+.word-rv{width:146px;color:#fff;animation:fadeUp 1.2s var(--ease) 2s both}
+.fu{animation:fadeUp 1.1s var(--ease) both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(26px);filter:blur(8px)}to{opacity:1;transform:none;filter:blur(0)}}
+.cue{width:2px;height:54px;background:rgba(255,255,255,.18);position:relative;overflow:hidden;border-radius:2px}
+.cue::after{content:"";position:absolute;inset-inline:0;top:-40%;height:40%;background:var(--sky);animation:cue 1.8s ease-in-out infinite}
+@keyframes cue{to{top:100%}}
+/* عرض الصور المتحركة */
+.reel-wrap{max-width:520px;margin:0 auto;display:flex;flex-direction:column;gap:18px;animation:reelIn 1.6s var(--ease) 1.3s both}
+@keyframes reelIn{from{opacity:0;transform:translateY(40px) scale(.9);filter:blur(8px)}to{opacity:1;transform:none;filter:none}}
+.reel{position:relative;aspect-ratio:1/1;overflow:hidden;border-radius:0 0 22px 22px;-webkit-mask-image:linear-gradient(to top,#000 75%,transparent 100%);mask-image:linear-gradient(to top,#000 75%,transparent 100%)}
+.sld{position:absolute;inset:0;opacity:0;transition:opacity 1.2s var(--ease)}
+.sld.act{opacity:1;z-index:1}
+.sld img,.sld video{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.12)}
+.sld.act img,.sld.act video{animation:kb 6.5s ease-out both}
+@keyframes kb{from{transform:scale(1.18) translate(var(--kx),var(--ky))}to{transform:scale(1.02) translate(0,0)}}
+.caps{position:relative;min-height:118px}
+.scap{position:absolute;inset:0;display:flex;flex-direction:column;gap:4px;color:#fff;pointer-events:none}
+.scap>*{opacity:0;transform:translateY(14px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.scap.act{pointer-events:auto}
+.scap.act>*{opacity:1;transform:none}
+.scap.act>:nth-child(1){transition-delay:.3s}.scap.act>:nth-child(2){transition-delay:.42s}.scap.act>:nth-child(3){transition-delay:.54s}
+.sdots{display:flex;gap:6px}
+.sdots i{width:8px;height:4px;border-radius:4px;background:rgba(255,255,255,.28);transition:all .5s var(--ease)}
+.sdots i.on{width:28px;background:#009BD5}
+@supports (animation-timeline: view()){
+  .hero-inner{animation:heroOut linear both;animation-timeline:view();animation-range:exit 0% exit 100%}
+  .reel-para{animation:reelPara linear both;animation-timeline:view();animation-range:exit 0% exit 100%}
+}
+@keyframes heroOut{to{opacity:0;transform:translateY(-90px) scale(.95);filter:blur(6px)}}
+@keyframes reelPara{to{transform:translateY(-150px) scale(1.06)}}
+/* جديد النهرين */
+.launch-card{position:relative;border-radius:28px;overflow:hidden;background:#fff;box-shadow:0 40px 90px rgba(0,155,213,.18)}
+.launch-card .ph,.launch-card img{width:100%;height:100%;min-height:420px;object-fit:cover;display:flex}
+.launch-card .new-badge{position:absolute;top:18px;inset-inline-start:18px;font-size:14px;padding:6px 14px}
+.lspec{display:flex;flex-direction:column;padding:12px 14px;border-radius:14px;background:#fff;border:1px solid #D3E5EF}
+/* المكائن */
+.mcard{display:flex;flex-direction:column;overflow:hidden;text-decoration:none;color:#101820;height:100%}
+.mcard:hover{color:#101820}
+.mcard .ph-g svg{transition:transform .8s var(--ease)}
+.mcard:hover .ph-g svg{transform:scale(1.12)}
+.spec-chip{font-size:12px;font-weight:600;padding:3px 10px;border-radius:8px;background:var(--g100);color:#3D4A55}
+.mtab{display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:start;width:100%;padding:14px 16px;border-radius:14px;border:1px solid #24333F;background:transparent;color:#DCE7EF;transition:all .35s var(--ease)}
+.mtab:hover{border-color:rgba(0,155,213,.6)}
+.mtab[aria-pressed="true"]{background:rgba(0,155,213,.12);border-color:var(--sky);color:#fff}
+.spot .ir{transition:opacity .5s var(--ease),transform .5s var(--ease);transition-delay:calc(var(--i) * 80ms)}
+.spot.out .ir{opacity:0;transform:translateY(14px);transition-delay:0s;transition-duration:.18s}
+.spot-img{transition:transform .6s var(--ease),opacity .4s}
+.spot.out .spot-img{transform:scale(.92);opacity:.2}
+.mat{display:flex;flex-direction:column;gap:10px;padding:22px;height:100%;box-sizing:border-box;text-decoration:none;color:#101820}
+.mat:hover{color:#101820}
+.mat-ic{width:52px;height:52px;border-radius:14px;background:#EAF6FC;color:#009BD5;display:flex;align-items:center;justify-content:center;transition:all .5s var(--ease)}
+.mat:hover .mat-ic{background:#101820;color:#38B6E6;transform:rotate(-8deg) scale(1.06)}
+.step-n{width:54px;height:54px;border-radius:50%;border:1.5px solid var(--sky);color:#38B6E6;display:flex;align-items:center;justify-content:center;font-family:'Readex Pro',sans-serif;font-weight:700;font-size:20px;background:#101820}
+/* الأعمال والأخبار */
+.wgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:260px;gap:16px}
+.w-big{grid-row:span 2}
+.wi{position:relative;display:block;width:100%;height:100%;padding:0;border:0;border-radius:20px;overflow:hidden;background:#EEF2F5;text-align:start;color:#fff}
+.wi img,.wi .ph{width:100%;height:100%;object-fit:cover;display:flex;transition:transform 1.2s var(--ease),filter .6s}
+.wi:hover img,.wi:focus-visible img{transform:scale(1.07);filter:brightness(.72)}
+.wi .cap{position:absolute;inset-inline:0;bottom:0;padding:48px 18px 16px;background:linear-gradient(to top,rgba(8,14,20,.9),rgba(8,14,20,0));display:flex;flex-direction:column;gap:2px;transform:translateY(26px);transition:transform .5s var(--ease)}
+.wi .cap .det{opacity:0;transition:opacity .4s}
+.wi:hover .cap,.wi:focus-visible .cap{transform:none}.wi:hover .cap .det,.wi:focus-visible .cap .det{opacity:1}
+.lb-img{transition:opacity .25s,transform .35s var(--ease)}.lb-img.out{opacity:0;transform:scale(.97)}
+.ncard{display:flex;flex-direction:column;height:100%;overflow:hidden;text-decoration:none;color:#101820}
+.ncard:hover{color:#101820}
+.dots{position:fixed;left:20px;top:50%;transform:translateY(-50%);z-index:40;display:flex;flex-direction:column;gap:4px}
+.dot{width:44px;height:26px;display:flex;align-items:center}
+.dot span{width:8px;height:8px;border-radius:50%;background:#9AA7B2;box-shadow:0 0 0 2px rgba(255,255,255,.6);transition:all .35s var(--ease)}
+.dot:hover span,.dot:focus-visible span{width:28px;border-radius:6px;background:var(--sky)}
+@media (max-width:900px){.wgrid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:220px}.dots{display:none!important}}
+@media (max-width:560px){.wgrid{grid-template-columns:minmax(0,1fr)}.w-big{grid-row:auto}}
+@media (max-width:760px){
+  .hero{min-height:0;align-items:flex-start}
+  .hero-inner{padding:108px 16px 96px!important;gap:28px!important}
+  .hero-inner > div{flex-basis:100%!important}
+  .logo-rv{width:84px}.word-rv{width:118px}
+  .floor,.beam{display:none}
+  .reel-wrap{max-width:100%}
+  .caps{min-height:138px}
+  .nh section:not(.hero) > div:not(.glow):not(.haze){padding-top:72px!important;padding-bottom:72px!important;padding-inline:16px!important}
+  .nh section h2{font-size:30px}
+  .spot-img{min-height:260px!important}
+  .spot > div,.launch-row > div{flex-basis:100%!important}
+  .launch-card .ph,.launch-card img{min-height:280px}
+  .mcard .ph-g{height:190px!important}
+  .nh form{padding:20px!important}
+  .nh footer > div{padding-inline:16px!important}
+  .wgrid{grid-auto-rows:240px}
+  .fab{width:52px;height:52px;left:14px;bottom:14px}
+  .annbar .ann-long{display:none}
+}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script type="text/x-dc-template" id="dc-template">
+
+<div class="nh {{motionClass}}" dir="{{dir}}" lang="{{lang}}" style="font-family: 'IBM Plex Sans Arabic', 'Readex Pro', system-ui, sans-serif; color: #FFFFFF; background: #101820; line-height: 1.7; min-width: 0; overflow-x: clip">
+<div class="curtain" aria-hidden="true"></div>
+
+<!-- شريط إعلان المنتج الجديد -->
+<sc-if value="{{annOn}}" hint-placeholder-val="{{ true }}">
+<div class="annbar" role="region" aria-label="{{t.annAria}}">
+<div style="max-width: 1320px; margin: 0 auto; padding: 0 16px; min-height: 42px; display: flex; align-items: center; justify-content: center; gap: 12px">
+<span class="ann-tag">{{t.newTag}}</span>
+<a href="#launch" style="position: relative; z-index: 1">{{annText}} <span aria-hidden="true">{{t.arrow}}</span></a>
+<button type="button" class="ann-x" onClick="{{closeAnn}}" aria-label="{{t.close}}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+</div>
+</div>
+</sc-if>
+
+<header class="{{navClass}}">
+<div style="max-width: 1320px; height: 100%; margin: 0 auto; padding: 0 24px; display: flex; gap: 16px; align-items: center; justify-content: space-between; box-sizing: border-box">
+<a href="#top" class="brand" aria-label="{{t.brandAria}}" style="display: flex; align-items: center; gap: 12px; text-decoration: none"><span class="logo-m" style="height: 46px"></span><span class="logo-w" style="height: 26px"></span></a>
+<nav class="nav-links" aria-label="{{t.mainNav}}" style="font-size: 15px">
+<sc-for list="{{navItems}}" as="n" hint-placeholder-count="7"><a class="{{n.cls}}" href="{{n.href}}">{{n.label}}</a></sc-for>
+</nav>
+<div style="display: flex; gap: 8px; align-items: center">
+<button type="button" class="lang-btn cta-ghost" onClick="{{toggleLang}}" lang="{{t.otherLangCode}}" aria-label="{{t.langAria}}">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18"></path></svg>{{t.otherLang}}</button>
+<a href="store.html" class="iconbtn cta-ghost" aria-label="{{t.storeAria}}" style="color: inherit"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2"></path><circle cx="10" cy="20" r="1.3"></circle><circle cx="17" cy="20" r="1.3"></circle></svg></a>
+<a class="btn btn-sky nav-cta" href="#contact" style="min-height: 44px; padding: 0 18px; font-size: 15px">{{t.quote}}</a>
+<button type="button" class="iconbtn burger cta-ghost" onClick="{{toggleMenu}}" aria-label="{{t.menu}}" aria-expanded="{{menuExpanded}}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
+</div>
+</div>
+</header>
+<sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}">
+<nav class="mmenu" aria-label="{{t.mobileNav}}"><sc-for list="{{navItems}}" as="n" hint-placeholder-count="7"><a href="{{n.href}}" onClick="{{closeMenu}}">{{n.label}}</a></sc-for></nav>
+</sc-if>
+
+<div style="display: flex; flex-direction: column">
+
+<!-- ===== الافتتاحية ===== -->
+<section id="top" class="hero" style="order: 0">
+<div class="glow" style="top: 0; right: 6%"></div>
+<div class="haze" style="bottom: 6%; left: 10%"></div>
+<div class="beam" style="right: 16%"></div>
+<div class="beam" style="left: 14%; animation-duration: 16s; animation-direction: alternate-reverse"></div>
+<div class="floor"></div>
+<div class="hero-inner" style="max-width: 1320px; width: 100%; margin: 0 auto; padding: 150px 24px 90px; display: flex; flex-wrap: wrap; gap: 56px; align-items: center; box-sizing: border-box">
+<div style="flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; align-items: flex-end; gap: 18px"><span class="logo-m logo-rv" role="img" aria-label="{{t.logoAlt}}"></span><span class="logo-w word-rv" aria-hidden="true"></span></div>
+<h1 class="fu" style="animation-delay: 2.2s; margin: 0; font-family: 'Readex Pro', sans-serif; font-weight: 700; font-size: clamp(34px, 5vw, 66px); line-height: 1.15">{{heroTitle}}</h1>
+<p class="fu" style="animation-delay: 2.5s; margin: 0; font-size: 19px; color: #C9D6E0; max-width: 580px">{{heroSub}}</p>
+<div class="fu" style="animation-delay: 2.8s; display: flex; flex-wrap: wrap; gap: 12px">
+<a class="btn btn-sky" href="#machines">{{t.browseMachines}}</a>
+<a class="btn btn-ghost" href="#materials">{{t.materialsBtn}}</a>
+</div>
+<div class="fu" style="animation-delay: 3.1s; display: flex; flex-wrap: wrap; gap: 18px; color: #A9B8C6; font-size: 14px">
+<sc-for list="{{t.perks}}" as="pk" hint-placeholder-count="4"><span style="display: flex; gap: 8px; align-items: center"><span style="width: 6px; height: 6px; border-radius: 50%; background: #009BD5"></span>{{pk}}</span></sc-for>
+</div>
+</div>
+<div class="reel-para" style="flex: 1.1 1 500px; min-width: 0">
+<div class="reel-wrap" role="region" aria-roledescription="{{t.slidesRole}}" aria-label="{{t.slidesAria}}">
+<div class="reel">
+<sc-for list="{{slides}}" as="sl" hint-placeholder-count="5">
+<div class="{{sl.cls}}" style="--kx: {{sl.kx}}; --ky: {{sl.ky}}" aria-hidden="{{sl.hidden}}">
+<sc-if value="{{sl.isImg}}" hint-placeholder-val="{{ true }}"><img src="{{sl.src}}" alt="{{sl.title}}"></sc-if>
+<sc-if value="{{sl.isVideo}}" hint-placeholder-val="{{ false }}"><video src="{{sl.src}}" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline"></video></sc-if>
+</div>
+</sc-for>
+</div>
+<div class="caps" aria-live="polite">
+<sc-for list="{{slides}}" as="sl" hint-placeholder-count="5">
+<div class="{{sl.capCls}}" aria-hidden="{{sl.hidden}}">
+<span style="font-size: 13px; font-weight: 600; color: #7FD3F5">{{sl.tag}}</span>
+<strong style="font-family: 'Readex Pro', sans-serif; font-size: clamp(19px, 2.2vw, 24px); font-weight: 600; line-height: 1.35">{{sl.title}}</strong>
+<span style="font-size: 15px; color: #C9D6E0">{{sl.text}}</span>
+</div>
+</sc-for>
+</div>
+<div class="sdots" aria-hidden="true"><sc-for list="{{slides}}" as="sl" hint-placeholder-count="5"><i class="{{sl.dot}}"></i></sc-for></div>
+</div>
+</div>
+</div>
+<a href="#launch" aria-label="{{t.next}}" class="fu" style="animation-delay: 3.3s; position: absolute; bottom: 26px; left: 50%; margin-left: -30px; width: 60px; display: flex; flex-direction: column; align-items: center; gap: 8px; color: #A9B8C6; text-decoration: none; font-size: 12px; padding: 6px 0">{{t.scroll}}<span class="cue"></span></a>
+</section>
+
+<!-- ===== جديد النهرين (إعلان منتج جديد) ===== -->
+<section id="launch" class="on-light {{vis.launch}}" style="order: {{ord.launch}}; background: #EAF6FC; color: #101820">
+<div class="launch-row" style="max-width: 1320px; margin: 0 auto; padding: 110px 24px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+<div class="grow" style="flex: 1.15 1 520px; min-width: 0">
+<div class="launch-card">
+<sc-if value="{{launch.hasImg}}" hint-placeholder-val="{{ false }}"><img src="{{launch.img}}" alt="{{launch.name}}"></sc-if>
+<sc-if value="{{launch.noImg}}" hint-placeholder-val="{{ true }}"><div class="ph ph-l" style="font-size: 14px"><svg width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="#009BD5" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 14h20v3H2zM4 17v3M20 17v3M6 14V9h12v5M9 9V6h6v3"></path></svg><span>{{t.launchImgPh}}</span></div></sc-if>
+<span class="new-badge">{{t.newTag}}</span>
+</div>
+</div>
+<div style="flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<span class="eyebrow t1">{{secTitle.launch}}</span>
+<h2 class="h2 t2">{{launch.name}}</h2>
+<p class="t3" style="margin: 0; font-size: 18px; color: #3C4C59">{{launch.text}}</p>
+<div class="t3" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+<sc-for list="{{launch.specs}}" as="sp" hint-placeholder-count="4"><span class="lspec"><span style="font-size: 12px; color: #4F5D69">{{sp.k}}</span><strong style="font-weight: 600">{{sp.v}}</strong></span></sc-for>
+</div>
+<span class="t4" style="font-size: 15px; color: #26343F"><strong>{{t.availableFrom}}</strong> {{launch.date}}</span>
+<div class="t4" style="display: flex; flex-wrap: wrap; gap: 12px">
+<a class="btn btn-sky" href="#contact">{{t.quote}}</a>
+<a class="btn btn-line" href="news.html">{{t.readAnnouncement}}</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ===== المكائن ===== -->
+<section id="machines" class="light {{vis.machines}}" style="order: {{ord.machines}}">
+<div style="max-width: 1320px; margin: 0 auto; padding: 130px 24px 110px">
+<div style="display: flex; flex-wrap: wrap; gap: 16px 48px; justify-content: space-between; align-items: flex-end; margin-bottom: 52px">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 720px">
+<span class="eyebrow t1">{{t.machinesEyebrow}}</span>
+<h2 class="h2 t2">{{secTitle.machines}}</h2>
+<p class="muted t3" style="margin: 0; font-size: 18px">{{t.machinesSub}}</p>
+</div>
+<a class="btn btn-navy t4" href="store.html">{{t.allMachines}}</a>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 22px">
+<sc-for list="{{machines}}" as="m" hint-placeholder-count="6">
+<div class="grow" style="flex: 1 1 340px; min-width: 0; animation-range: entry {{m.r1}} cover {{m.r2}}">
+<a class="lcard lift-l mcard" href="store.html">
+<div class="ph ph-g" style="height: 230px; border-radius: 22px 22px 0 0"><svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#009BD5" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{m.icon}}"></path></svg><span>{{m.ph}}</span></div>
+<div style="padding: 22px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1">
+<span style="font-size: 13px; color: #00739E; font-weight: 600">{{m.group}}</span>
+<h3 style="margin: 0; font-family: 'Readex Pro', sans-serif; font-size: 22px; font-weight: 600">{{m.name}}</h3>
+<p class="muted" style="margin: 0; font-size: 15px">{{m.desc}}</p>
+<div style="display: flex; flex-wrap: wrap; gap: 6px"><sc-for list="{{m.specs}}" as="z" hint-placeholder-count="2"><span class="spec-chip">{{z}}</span></sc-for></div>
+<span style="margin-top: auto; padding-top: 12px; color: #00739E; font-weight: 700; font-size: 15px">{{t.browseModels}} {{t.arrow}}</span>
+</div>
+</a>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<!-- ===== مكائن مختارة ===== -->
+<section id="featured" class="{{vis.featured}}" style="order: {{ord.featured}}; background: #101820; position: relative; overflow: hidden">
+<div class="glow" style="top: 10%; left: -14%; width: 600px; height: 600px"></div>
+<div style="max-width: 1320px; margin: 0 auto; padding: 120px 24px">
+<div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 40px; max-width: 720px">
+<span class="eyebrow t1">{{t.featuredEyebrow}}</span>
+<h2 class="h2 t2">{{secTitle.featured}}</h2>
+</div>
+<div class="spot {{spotOut}}" style="display: flex; flex-wrap: wrap; gap: 28px; align-items: stretch">
+<div class="grow" style="flex: 1.5 1 540px; min-width: 0">
+<div class="spot-img ph" style="height: 100%; min-height: 420px; border-radius: 24px; border: 1px solid #24333F; font-size: 15px"><svg width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="#38B6E6" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{spot.icon}}"></path></svg><span>{{spot.ph}}</span></div>
+</div>
+<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+<div role="group" aria-label="{{t.pickMachine}}" style="display: flex; flex-direction: column; gap: 8px">
+<sc-for list="{{spotTabs}}" as="tb" hint-placeholder-count="3"><button type="button" class="mtab" onClick="{{tb.pick}}" aria-pressed="{{tb.pressed}}"><span style="font-size: 13px; color: #7FD3F5">{{tb.group}}</span><span style="font-family: 'Readex Pro', sans-serif; font-weight: 600; font-size: 17px">{{tb.name}}</span></button></sc-for>
+</div>
+<div style="margin-top: 6px; background: #14202B; border: 1px solid #24333F; border-radius: 20px; padding: 22px; display: flex; flex-direction: column; gap: 2px">
+<sc-for list="{{spotSpecs}}" as="r" hint-placeholder-count="5"><div class="ir" style="--i: {{r.i}}; display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid #1E2C38"><span style="color: #A9B8C6">{{r.k}}</span><span style="font-weight: 600; text-align: end">{{r.v}}</span></div></sc-for>
+<div class="ir" style="--i: 6; display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px">
+<a class="btn btn-sky" href="#contact" style="flex: 1 1 160px">{{t.quote}}</a>
+<a class="btn btn-ghost" href="#contact" style="flex: 1 1 160px">{{t.demo}}</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ===== مواد الإعلان ===== -->
+<section id="materials" class="gray {{vis.materials}}" style="order: {{ord.materials}}">
+<div style="max-width: 1320px; margin: 0 auto; padding: 120px 24px">
+<div style="display: flex; flex-wrap: wrap; gap: 16px 48px; justify-content: space-between; align-items: flex-end; margin-bottom: 44px">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 700px">
+<span class="eyebrow t1">{{t.materialsEyebrow}}</span>
+<h2 class="h2 t2">{{secTitle.materials}}</h2>
+<p class="muted t3" style="margin: 0; font-size: 18px">{{t.materialsSub}}</p>
+</div>
+<a class="btn btn-navy t4" href="store.html">{{t.shopMaterials}}</a>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<sc-for list="{{materials}}" as="m" hint-placeholder-count="8">
+<div class="grow-sm" style="flex: 1 1 260px; min-width: 0; animation-range: entry {{m.r1}} cover {{m.r2}}">
+<a class="lcard lift-l mat" href="store.html"><span class="mat-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{m.icon}}"></path></svg></span><span style="font-family: 'Readex Pro', sans-serif; font-size: 19px; font-weight: 600">{{m.name}}</span><span class="muted" style="font-size: 14px">{{m.desc}}</span></a>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<!-- ===== قطع الغيار ===== -->
+<section id="parts" class="light {{vis.parts}}" style="order: {{ord.parts}}">
+<div style="max-width: 1320px; margin: 0 auto; padding: 110px 24px; display: flex; flex-wrap: wrap; gap: 40px; align-items: center">
+<div style="flex: 1.3 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<span class="eyebrow t1">{{t.partsEyebrow}}</span>
+<h2 class="h2 t2">{{secTitle.parts}}</h2>
+<p class="muted t3" style="margin: 0; font-size: 18px">{{t.partsSub}}</p>
+<div class="t4" style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px"><sc-for list="{{parts}}" as="p" hint-placeholder-count="8"><span style="padding: 8px 14px; border-radius: 12px; background: #F6F8FA; border: 1px solid #DDE4EA; font-weight: 600; font-size: 15px">{{p}}</span></sc-for></div>
+</div>
+<div class="grow" style="flex: 1 1 360px; min-width: 0">
+<div style="background: #101820; color: #fff; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 30px 70px rgba(16,24,32,.2)">
+<span style="width: 56px; height: 56px; border-radius: 16px; background: rgba(0,155,213,.16); color: #38B6E6; display: flex; align-items: center; justify-content: center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"></path></svg></span>
+<strong style="font-family: 'Readex Pro', sans-serif; font-size: 22px">{{t.partQ}}</strong>
+<span style="color: #C9D6E0">{{t.partQText}}</span>
+<a class="btn btn-sky" href="https://wa.me/9647XXXXXXXXX" style="align-self: flex-start">{{t.sendWa}}</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ===== ما بعد البيع ===== -->
+<section id="after" class="{{vis.after}}" style="order: {{ord.after}}; background: #0A1118">
+<div style="max-width: 1320px; margin: 0 auto; padding: 120px 24px">
+<div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 52px; max-width: 700px"><span class="eyebrow t1">{{t.afterEyebrow}}</span><h2 class="h2 t2">{{secTitle.after}}</h2></div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px">
+<sc-for list="{{steps}}" as="st" hint-placeholder-count="4">
+<div class="rv" style="flex: 1 1 250px; min-width: 0; display: flex; flex-direction: column; gap: 14px; animation-range: entry {{st.r1}} cover {{st.r2}}"><span class="step-n">{{st.n}}</span><strong style="font-family: 'Readex Pro', sans-serif; font-size: 20px">{{st.name}}</strong><span style="color: #A9B8C6; font-size: 15px">{{st.desc}}</span></div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<!-- ===== أعمالنا ===== -->
+<section id="works" class="gray {{vis.works}}" style="order: {{ord.works}}">
+<div style="max-width: 1320px; margin: 0 auto; padding: 120px 24px">
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: flex-end; margin-bottom: 32px">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 640px"><span class="eyebrow t1">{{t.worksEyebrow}}</span><h2 class="h2 t2">{{secTitle.works}}</h2></div>
+<div class="t3" role="group" aria-label="{{t.worksFilter}}" style="display: flex; flex-wrap: wrap; gap: 8px"><sc-for list="{{wcats}}" as="c" hint-placeholder-count="6"><button type="button" class="chip-l" onClick="{{c.pick}}" aria-pressed="{{c.pressed}}">{{c.label}}</button></sc-for></div>
+</div>
+<div class="wgrid swap {{wOut}}">
+<sc-for list="{{works}}" as="w" hint-placeholder-count="6">
+<div class="grow {{w.span}}" style="animation-range: entry {{w.r1}} cover {{w.r2}}">
+<button type="button" class="wi" onClick="{{w.open}}" aria-label="{{w.title}}">
+<sc-if value="{{w.hasImg}}" hint-placeholder-val="{{ true }}"><img src="{{w.src}}" alt="{{w.title}}" loading="lazy"></sc-if>
+<sc-if value="{{w.noImg}}" hint-placeholder-val="{{ false }}"><span class="ph ph-g">{{w.ph}}</span></sc-if>
+<span class="cap"><span style="font-size: 12px; color: #7FD3F5; font-weight: 600">{{w.cat}}</span><strong style="font-family: 'Readex Pro', sans-serif; font-size: 18px; font-weight: 600">{{w.title}}</strong><span class="det" style="font-size: 14px; color: #D5E0E8">{{w.desc}}</span></span>
+</button>
+</div>
+</sc-for>
+</div>
+<div class="rv" style="display: flex; justify-content: center; margin-top: 36px"><a class="btn btn-line" href="works.html">{{t.allWorks}}</a></div>
+</div>
+</section>
+
+<!-- ===== الأخبار والمقالات ===== -->
+<section id="news" class="light {{vis.news}}" style="order: {{ord.news}}">
+<div style="max-width: 1320px; margin: 0 auto; padding: 110px 24px">
+<div style="display: flex; flex-wrap: wrap; gap: 16px 48px; justify-content: space-between; align-items: flex-end; margin-bottom: 40px">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 700px"><span class="eyebrow t1">{{t.newsEyebrow}}</span><h2 class="h2 t2">{{secTitle.news}}</h2></div>
+<a class="btn btn-navy t3" href="news.html">{{t.allNews}}</a>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 22px">
+<sc-for list="{{news}}" as="a" hint-placeholder-count="3">
+<div class="grow-sm" style="flex: 1 1 320px; min-width: 0; animation-range: entry {{a.r1}} cover {{a.r2}}">
+<a class="lcard lift-l ncard" href="news.html">
+<div class="zoom" style="height: 210px; position: relative"><div class="zi ph ph-g" style="height: 100%">{{a.ph}}</div><sc-if value="{{a.isLaunch}}" hint-placeholder-val="{{ false }}"><span class="new-badge" style="position: absolute; top: 14px; inset-inline-start: 14px">{{t.newTag}}</span></sc-if></div>
+<div style="padding: 22px; display: flex; flex-direction: column; gap: 8px; flex-grow: 1">
+<span style="font-size: 13px; color: #00739E; font-weight: 600">{{a.cat}} · {{a.date}}</span>
+<h3 style="margin: 0; font-family: 'Readex Pro', sans-serif; font-size: 20px; font-weight: 600; line-height: 1.4">{{a.title}}</h3>
+<p class="muted" style="margin: 0; font-size: 15px">{{a.excerpt}}</p>
+<span style="margin-top: auto; padding-top: 8px; color: #00739E; font-weight: 700; font-size: 15px">{{t.readMore}} {{t.arrow}}</span>
+</div>
+</a>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<!-- ===== تواصل ===== -->
+<section id="contact" class="light {{vis.contact}}" style="order: {{ord.contact}}; border-top: 1px solid #EDF1F4">
+<div style="max-width: 1320px; margin: 0 auto; padding: 120px 24px; display: flex; flex-wrap: wrap; gap: 56px">
+<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+<span class="eyebrow t1">{{t.contactEyebrow}}</span>
+<h2 class="h2 t2">{{secTitle.contact}}</h2>
+<p class="muted t3" style="margin: 0; font-size: 18px">{{t.contactSub}}</p>
+<a class="btn btn-sky t4" href="https://wa.me/9647XXXXXXXXX" style="align-self: flex-start"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.4 7.9L3 21l1.2-4.4A9 9 0 1 1 21 12z"></path></svg>{{t.waUs}}</a>
+<div class="t4" style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px; color: #26343F">
+<span><strong>{{t.phone}}:</strong> [07XX XXX XXXX]</span>
+<span><strong>{{t.showroom}}:</strong> {{t.addressPh}}</span>
+<span><strong>{{t.hours}}:</strong> {{t.hoursPh}}</span>
+</div>
+</div>
+<div class="grow-sm" style="flex: 1.3 1 480px; min-width: 0">
+<sc-if value="{{notSent}}" hint-placeholder-val="{{ true }}">
+<form style="background: #F6F8FA; border: 1px solid #DDE4EA; border-radius: 24px; padding: 32px; display: flex; flex-wrap: wrap; gap: 18px; box-sizing: border-box">
+<div role="group" aria-label="{{t.reqType}}" style="flex: 1 1 100%; display: flex; gap: 8px; flex-wrap: wrap"><sc-for list="{{orderTypes}}" as="o" hint-placeholder-count="4"><button type="button" class="chip-l" onClick="{{o.pick}}" aria-pressed="{{o.pressed}}">{{o.label}}</button></sc-for></div>
+<div style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px"><label for="o-name" style="font-weight: 600">{{t.name}}</label><input id="o-name" class="field field-l" type="text"></div>
+<div style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px"><label for="o-phone" style="font-weight: 600">{{t.phone}}</label><input id="o-phone" class="field field-l" type="tel" placeholder="07XX XXX XXXX"></div>
+<div style="flex: 1 1 100%; display: flex; flex-direction: column; gap: 6px"><label for="o-msg" style="font-weight: 600">{{t.details}}</label><textarea id="o-msg" class="field field-l" rows="4" placeholder="{{t.detailsPh}}"></textarea></div>
+<button type="button" class="btn btn-sky" onClick="{{send}}" style="min-height: 54px; padding: 0 36px; border: 0">{{t.sendReq}}</button>
+</form>
+</sc-if>
+<sc-if value="{{sent}}" hint-placeholder-val="{{ false }}">
+<div class="modal" role="status" style="background: #F6F8FA; border: 1px solid #009BD5; border-radius: 24px; padding: 40px; display: flex; flex-direction: column; gap: 12px; align-items: flex-start">
+<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#009BD5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M8 12.5l2.6 2.5L16 9.5"></path></svg>
+<span style="font-family: 'Readex Pro', sans-serif; font-size: 24px; font-weight: 600">{{t.received}}</span>
+<span class="muted">{{t.receivedText}}</span>
+<button type="button" class="btn btn-line" onClick="{{reset}}">{{t.another}}</button>
+</div>
+</sc-if>
+</div>
+</div>
+</section>
+</div>
+
+<footer style="background: #101820; color: #A9B8C6; font-size: 15px">
+<div style="max-width: 1320px; margin: 0 auto; padding: 72px 24px 32px; display: flex; flex-wrap: wrap; gap: 48px; justify-content: space-between">
+<div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; align-items: flex-end; gap: 14px; color: #FFFFFF"><span class="logo-m" style="height: 84px"></span><span class="logo-w" style="height: 34px"></span></div>
+<span style="max-width: 380px">{{t.footerAbout}}</span>
+</div>
+<div style="flex: 0 1 180px; display: flex; flex-direction: column; gap: 6px"><span style="color: #FFFFFF; font-weight: 600; margin-bottom: 4px">{{t.store}}</span><a class="navlink" href="store.html" style="color: #C3D2DE">{{t.navMachines}}</a><a class="navlink" href="store.html" style="color: #C3D2DE">{{t.navMaterials}}</a><a class="navlink" href="store.html" style="color: #C3D2DE">{{t.navParts}}</a></div>
+<div style="flex: 0 1 180px; display: flex; flex-direction: column; gap: 6px"><span style="color: #FFFFFF; font-weight: 600; margin-bottom: 4px">{{t.company}}</span><a class="navlink" href="works.html" style="color: #C3D2DE">{{t.navWorks}}</a><a class="navlink" href="news.html" style="color: #C3D2DE">{{t.navNews}}</a><a class="navlink" href="admin.html" style="color: #C3D2DE">{{t.admin}}</a></div>
+<div style="flex: 0 1 220px; display: flex; flex-direction: column; gap: 6px"><span style="color: #FFFFFF; font-weight: 600; margin-bottom: 4px">{{t.contactEyebrow}}</span><span>[07XX XXX XXXX]</span><span>[email@domain]</span><span>[Instagram] · [Facebook]</span></div>
+</div>
+<div style="max-width: 1320px; margin: 0 auto; padding: 20px 24px; border-top: 1px solid #1E2C38; font-size: 14px">{{t.rights}}</div>
+</footer>
+
+<nav class="dots" aria-label="{{t.secNav}}"><sc-for list="{{dots}}" as="d" hint-placeholder-count="7"><a class="dot" href="{{d.href}}" aria-label="{{d.label}}"><span></span></a></sc-for></nav>
+<a class="fab" href="https://wa.me/9647XXXXXXXXX" aria-label="{{t.waUs}}"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.4 7.9L3 21l1.2-4.4A9 9 0 1 1 21 12z"></path></svg></a>
+
+<sc-if value="{{lbOpen}}" hint-placeholder-val="{{ false }}">
+<div class="shade" onClick="{{closeLb}}"></div>
+<div style="position: fixed; inset: 0; z-index: 90; display: flex; align-items: center; justify-content: center; padding: 20px; pointer-events: none">
+<div class="modal" role="dialog" aria-label="{{lb.title}}" style="pointer-events: auto; width: min(1100px, 100%); max-height: 100%; display: flex; flex-direction: column; gap: 14px">
+<div class="lb-img {{lbOutClass}}" style="border-radius: 18px; overflow: hidden; background: #0B141C; min-height: 300px; display: flex">
+<sc-if value="{{lb.hasImg}}" hint-placeholder-val="{{ true }}"><img src="{{lb.src}}" alt="{{lb.title}}" style="width: 100%; max-height: 72vh; object-fit: contain; display: block"></sc-if>
+<sc-if value="{{lb.noImg}}" hint-placeholder-val="{{ false }}"><span class="ph" style="flex: 1; min-height: 360px; font-size: 15px">{{lb.ph}}</span></sc-if>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; color: #FFFFFF">
+<div style="display: flex; flex-direction: column"><span style="font-size: 13px; color: #7FD3F5">{{lb.cat}} · {{lbCount}}</span><strong style="font-family: 'Readex Pro', sans-serif; font-size: 21px; font-weight: 600">{{lb.title}}</strong><span style="color: #C3D2DE; font-size: 15px">{{lb.desc}}</span></div>
+<div style="display: flex; gap: 8px">
+<button type="button" class="iconbtn" onClick="{{prevLb}}" aria-label="{{t.prev}}" style="color: #fff"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="{{t.prevIcon}}"></path></svg></button>
+<button type="button" class="iconbtn" onClick="{{nextLb}}" aria-label="{{t.nextItem}}" style="color: #fff"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="{{t.nextIcon}}"></path></svg></button>
+<button type="button" class="iconbtn" onClick="{{closeLb}}" aria-label="{{t.close}}" style="color: #fff"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+</div>
+</div>
+</div>
+</div>
+</sc-if>
+
+</div>
+</script>
+<script type="text/x-dc" id="dc-logic" data-props='{"motion":{"editor":"enum","options":["full","light","off"],"default":"full"},"navStyle":{"editor":"enum","options":["dark","white"],"default":"dark"},"startLang":{"editor":"enum","options":["saved","ar","en"],"default":"saved"},"$preview":{"width":1440,"height":8600}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    const sl = props.startLang ?? 'saved';
+    this.state = { lang: sl === 'saved' ? this.readLang() : sl, cfg: this.readCfg(), annClosed: false, slide: 0, spot: 0, spotOut: false, wcat: 'all', wOut: false, lb: null, lbOut: false, menu: false, sent: false, type: 'machine' };
+  }
+  readLang() { try { return localStorage.getItem('nh-lang') || 'ar'; } catch (e) { return 'ar'; } }
+  readCfg() { try { return JSON.parse(localStorage.getItem('nh-site') || '{}') || {}; } catch (e) { return {}; } }
+  componentDidMount() {
+    this.iv = setInterval(() => this.setState({ slide: (this.state.slide + 1) % (this.nS || 1) }), 5500);
+    this.onStore = (e) => { if (e.key === 'nh-site') this.setState({ cfg: this.readCfg() }); if (e.key === 'nh-lang') this.setState({ lang: this.readLang() }); };
+    try { window.addEventListener('storage', this.onStore); } catch (e) {}
+  }
+  componentWillUnmount() { clearInterval(this.iv); try { window.removeEventListener('storage', this.onStore); } catch (e) {} }
+  renderVals() {
+    const s = this.state; const ar = s.lang !== 'en'; const L = (a, e) => (ar ? a : e);
+    const c = s.cfg || {};
+    const motion = c.motion || this.props.motion || 'full';
+    const navStyle = c.nav || this.props.navStyle || 'dark';
+    const rg = (i, n) => ({ r1: (i % n) * 5 + '%', r2: (36 + (i % n) * 5) + '%' });
+    const t = {
+      newTag: L('جديد', 'NEW'), annAria: L('إعلان منتج جديد', 'New product announcement'), close: L('إغلاق', 'Close'), arrow: L('←', '→'),
+      brandAria: L('النهرين — الرئيسية', 'Al-Nahrain — Home'), mainNav: L('القائمة الرئيسية', 'Main menu'), mobileNav: L('قائمة الجوال', 'Mobile menu'),
+      otherLang: L('English', 'عربي'), otherLangCode: L('en', 'ar'), langAria: L('Switch to English', 'التبديل إلى العربية'),
+      storeAria: L('المتجر والسلة', 'Store and cart'), quote: L('اطلب عرض سعر', 'Request a quote'), menu: L('القائمة', 'Menu'),
+      logoAlt: L('شعار النهرين', 'Al-Nahrain logo'), browseMachines: L('تصفّح المكائن', 'Browse machines'), materialsBtn: L('مواد الإعلان', 'Sign materials'),
+      perks: ar ? ['تركيب وتشغيل', 'تدريب', 'ضمان وصيانة', 'قطع غيار'] : ['Installation', 'Training', 'Warranty & service', 'Spare parts'],
+      slidesRole: L('عرض شرائح', 'carousel'), slidesAria: L('صور من أعمال النهرين', 'Al-Nahrain work in pictures'), next: L('انتقل للأسفل', 'Scroll down'), scroll: L('مرّر', 'Scroll'),
+      launchImgPh: L('[صورة احترافية للمنتج الجديد]', '[Professional photo of the new product]'), availableFrom: L('متوفر من:', 'Available from:'), readAnnouncement: L('اقرأ الإعلان كاملاً', 'Read the announcement'),
+      machinesEyebrow: L('مكائن الإعلان', 'Sign-making machines'), machinesSub: L('طابعات رول ومسطحة، مكائن قطع وحفر، ومكائن تعويج الحروف — مع التركيب والتدريب وقطع الغيار.', 'Roll and flatbed printers, cutting and engraving machines, and letter benders — with installation, training and parts.'),
+      allMachines: L('كل المكائن', 'All machines'), browseModels: L('تصفّح الموديلات', 'Browse models'),
+      featuredEyebrow: L('مكائن مختارة', 'Featured machines'), pickMachine: L('اختر ماكنة', 'Choose a machine'), demo: L('اطلب عرضاً تجريبياً', 'Book a demo'),
+      materialsEyebrow: L('مواد الإعلان', 'Sign materials'), materialsSub: L('بالجملة والمفرد، مع القص حسب المقاس والتوصيل لكل المحافظات.', 'Wholesale and retail, cut to size and delivered across Iraq.'), shopMaterials: L('تسوّق المواد', 'Shop materials'),
+      partsEyebrow: L('قطع الغيار', 'Spare parts'), partsSub: L('قطع غيار للطابعات ومكائن CNC والليزر والتعويج — متوفرة في المخزن أو بطلب خاص.', 'Parts for printers, CNC, laser and bending machines — in stock or on special order.'),
+      partQ: L('تبحث عن قطعة معيّنة؟', 'Looking for a specific part?'), partQText: L('أرسل رقم القطعة أو صورتها مع موديل الماكنة، ونردّ عليك بالتوفر والسعر.', 'Send the part number or a photo with your machine model and we\'ll reply with price and availability.'), sendWa: L('أرسل عبر واتساب', 'Send on WhatsApp'),
+      afterEyebrow: L('ما بعد البيع', 'After-sales'), worksEyebrow: L('من أعمالنا', 'Our work'), worksFilter: L('تصنيف الأعمال', 'Filter work'), allWorks: L('كل الأعمال', 'All work'),
+      newsEyebrow: L('الأخبار والمقالات', 'News & articles'), allNews: L('كل الأخبار', 'All news'), readMore: L('اقرأ المزيد', 'Read more'),
+      contactEyebrow: L('تواصل معنا', 'Contact us'), contactSub: L('ماكنة، مواد، قطع غيار، أو طلب طباعة — أرسل طلبك ويتواصل معك فريق المبيعات.', 'A machine, materials, parts or a print job — send your request and our sales team will contact you.'),
+      waUs: L('راسلنا على واتساب', 'Message us on WhatsApp'), phone: L('الهاتف', 'Phone'), showroom: L('المعرض', 'Showroom'), hours: L('أوقات العمل', 'Opening hours'),
+      addressPh: L('[المحافظة — المنطقة — الشارع]', '[Province — District — Street]'), hoursPh: L('[السبت – الخميس]', '[Saturday – Thursday]'),
+      reqType: L('نوع الطلب', 'Request type'), name: L('الاسم', 'Name'), details: L('التفاصيل', 'Details'), detailsPh: L('نوع الماكنة أو المادة، الموديل، الكمية، المقاسات…', 'Machine or material, model, quantity, sizes…'),
+      sendReq: L('إرسال الطلب', 'Send request'), received: L('تم استلام طلبك', 'Request received'), receivedText: L('رقم الطلب [#0000] — سنتواصل معك عبر الهاتف أو واتساب.', 'Request [#0000] — we\'ll contact you by phone or WhatsApp.'), another: L('إرسال طلب آخر', 'Send another request'),
+      footerAbout: L('النهرين — بيع مكائن ومعدات الإعلان وقطع غيارها، ومواد تجهيز الإعلان، مع التركيب والتدريب والصيانة.', 'Al-Nahrain — sign-making machines, spare parts and advertising materials, with installation, training and service.'),
+      store: L('المتجر', 'Store'), company: L('الشركة', 'Company'), admin: L('دخول الإدارة', 'Admin login'),
+      navMachines: L('المكائن', 'Machines'), navMaterials: L('مواد الإعلان', 'Materials'), navParts: L('قطع الغيار', 'Spare parts'), navWorks: L('أعمالنا', 'Our work'), navNews: L('الأخبار', 'News'),
+      rights: L('© [السنة] النهرين. جميع الحقوق محفوظة.', '© [Year] Al-Nahrain. All rights reserved.'), secNav: L('التنقل بين الأقسام', 'Section navigation'),
+      prev: L('السابق', 'Previous'), nextItem: L('التالي', 'Next'), prevIcon: ar ? 'M9 6l6 6-6 6' : 'M15 6l-6 6 6 6', nextIcon: ar ? 'M15 6l-6 6 6 6' : 'M9 6l6 6-6 6'
+    };
+    // ترتيب الأقسام وإظهارها (من لوحة التحكم)
+    const defOrder = ['launch', 'machines', 'featured', 'materials', 'parts', 'after', 'works', 'news', 'contact'];
+    const order = (c.sections && c.sections.length) ? c.sections.map((x) => x.id).filter((id) => defOrder.indexOf(id) !== -1) : defOrder;
+    defOrder.forEach((id) => { if (order.indexOf(id) === -1) order.push(id); });
+    const hidden = {}; (c.sections || []).forEach((x) => { if (x.on === false) hidden[x.id] = true; });
+    const ord = {}; const vis = {}; order.forEach((id, i) => { ord[id] = i + 1; vis[id] = hidden[id] ? 'sec-off' : ''; });
+    const defTitles = {
+      launch: L('جديد النهرين', 'Just launched'), machines: L('مكائن تصنع الإعلان من أول خطوة', 'Machines that build signs from step one'), featured: L('تعرّف على الماكنة قبل أن تطلبها', 'Meet the machine before you order'),
+      materials: L('كل مواد تجهيز الإعلان في مكان واحد', 'Every sign-making material in one place'), parts: L('قطع أصلية تُبقي ماكنتك تعمل', 'Genuine parts that keep you running'),
+      after: L('لا نبيعك الماكنة ونغيب', 'We don\'t sell and disappear'), works: L('نماذج من أعمال الطباعة والإعلان', 'Selected print and sign work'), news: L('آخر الأخبار والمقالات', 'Latest news & articles'), contact: L('اطلب عرض سعر', 'Request a quote')
+    };
+    const secTitle = {}; defOrder.forEach((id) => { const o = (c.titles || {})[id]; secTitle[id] = (o && (ar ? o.ar : o.en)) || defTitles[id]; });
+    const navItems = [ ['#top', L('الرئيسية', 'Home')], ['#machines', t.navMachines], ['#materials', t.navMaterials], ['#parts', t.navParts], ['works.html', t.navWorks], ['news.html', t.navNews], ['#contact', t.contactEyebrow] ]
+      .map((n, i) => ({ href: n[0], label: n[1], cls: 'navlink' + (i === 0 ? ' on' : '') }));
+    // شرائح الافتتاحية
+    const defSlides = [
+      { src: 'assets/img/d38d70f55892e853b8519f8a77491ce6.jpg', tagAr: 'إعلانات ضوئية', tagEn: 'Illuminated signs', titleAr: 'لوحة واجهة مضيئة بحروف بارزة', titleEn: 'Illuminated fascia with raised letters', textAr: 'نص تجريبي: حروف أكريلك مضيئة مع إطار إضاءة سبوت.', textEn: 'Sample text: illuminated acrylic letters with a spotlight frame.' },
+      { src: 'assets/img/47ce93c87d091c5f47a17854ad026389.jpg', tagAr: 'طباعة كبيرة الحجم', tagEn: 'Large-format print', titleAr: 'تلبيس زجاج واجهة كاملة', titleEn: 'Full-building window graphics', textAr: 'نص تجريبي: ستيكر مطبوع على طابعة سولفنت.', textEn: 'Sample text: vinyl printed on a solvent printer.' },
+      { src: 'assets/img/cd0f8ddaf49243be8437a51ae7271007.jpg', tagAr: 'قص وحفر', tagEn: 'Cutting & engraving', titleAr: 'حروف معدنية بإضاءة خلفية', titleEn: 'Back-lit metal letters', textAr: 'نص تجريبي: شعار مقصوص بالليزر مع إنارة LED.', textEn: 'Sample text: laser-cut logo with LED back-lighting.' },
+      { src: 'assets/img/c84bdf4b1032b23e32c4844161fd680d.jpg', tagAr: 'إنارة LED', tagEn: 'LED lighting', titleAr: 'واجهة بخطوط إضاءة أفقية', titleEn: 'Storefront with linear LED', textAr: 'نص تجريبي: شرائح LED خطية مع لوحات مطبوعة.', textEn: 'Sample text: linear LED strips with printed panels.' },
+      { src: 'assets/img/2d50e5a79c35014de06e3f860d0e8f5a.jpg', tagAr: 'ديكور إعلاني', tagEn: 'Interior signage', titleAr: 'حروف مضيئة على جدار أخضر', titleEn: 'Lit letters on a green wall', textAr: 'نص تجريبي: حروف أكريلك مضيئة داخل مول.', textEn: 'Sample text: illuminated acrylic letters inside a mall.' }
+    ];
+    const slideSrc = (c.slides && c.slides.length ? c.slides : defSlides).filter((x) => x.on !== false);
+    this.nS = slideSrc.length || 1;
+    const cur = s.slide % this.nS;
+    const slides = slideSrc.map((x, i) => { const on = i === cur; const isV = /\.(mp4|webm)$/i.test(x.src || '') || x.type === 'video'; return {
+      src: x.src, tag: ar ? x.tagAr : (x.tagEn || x.tagAr), title: ar ? x.titleAr : (x.titleEn || x.titleAr), text: ar ? x.textAr : (x.textEn || x.textAr),
+      cls: 'sld' + (on ? ' act' : ''), capCls: 'scap' + (on ? ' act' : ''), dot: on ? 'on' : '', hidden: on ? 'false' : 'true', isImg: !isV, isVideo: isV,
+      kx: (i % 2 ? '-3%' : '3%'), ky: (i % 3 ? '2%' : '-2%') }; });
+    // المنتج الجديد
+    const lc = c.launch || {};
+    const launch = {
+      name: (ar ? lc.nameAr : lc.nameEn) || L('طابعة UV فلات [الموديل] — وصلت الآن', 'UV flatbed printer [model] — now in stock'),
+      text: (ar ? lc.textAr : lc.textEn) || L('اطبع مباشرة على الأكريلك والخشب والمعدن والزجاج بألوان ثابتة وطبقة أبيض وورنيش. متوفرة الآن في معرض النهرين مع التركيب والتدريب.', 'Print straight onto acrylic, wood, metal and glass with lasting colour, white and varnish. Now at the Al-Nahrain showroom with installation and training.'),
+      date: (ar ? lc.dateAr : lc.dateEn) || L('[تاريخ الإطلاق]', '[Launch date]'),
+      img: lc.img || '', hasImg: !!lc.img, noImg: !lc.img,
+      specs: [ [L('مساحة الطاولة', 'Bed size'), '[—] × [—] cm'], [L('أقصى سماكة', 'Max thickness'), '[—] cm'], [L('الألوان', 'Colours'), 'CMYK + W + V'], [L('الضمان', 'Warranty'), '[—]'] ].map((r) => ({ k: r[0], v: r[1] }))
+    };
+    const ann = c.ann || {};
+    const annOn = (ann.on !== false) && !s.annClosed;
+    const annText = (ar ? ann.ar : ann.en) || L('وصلت طابعة UV فلات الجديدة — اكتشف المواصفات والسعر', 'The new UV flatbed printer has arrived — see specs and pricing');
+    const ic = {
+      printer: 'M6 9V4h12v5M4 9h16a2 2 0 0 1 2 2v4H2v-4a2 2 0 0 1 2-2zM6 15v5h12v-5M9 18h6', uvroll: 'M6 9V4h12v5M4 9h16a2 2 0 0 1 2 2v4H2v-4a2 2 0 0 1 2-2zM6 15v5h12v-5M12 2v2M8 2.5l.8 1.5M16 2.5l-.8 1.5',
+      flat: 'M2 14h20v3H2zM4 17v3M20 17v3M6 14V9h12v5M9 9V6h6v3', cnc: 'M3 20h18M5 20V8h14v12M5 8l3-4h8l3 4M12 8v6M10 14h4l-2 3z',
+      laser: 'M4 6h16v12H4zM12 6v5M10 13l2-2 2 2M8 18v2M16 18v2M12 11l3 4', bend: 'M4 18c0-6 4-10 10-10h6M14 4l6 4-6 4M4 18h4M4 14v8'
+    };
+    const ph = (n) => L('[صورة: ', '[Photo: ') + n + ']';
+    const machines = [
+      [L('طابعات رول', 'Roll printers'), L('طابعات سولفنت وإيكو سولفنت', 'Solvent & eco-solvent printers'), L('لطباعة الفلكس والستيكر والكانفاس بأحجام كبيرة.', 'Large-format printing on flex, vinyl and canvas.'), [L('عرض [١٫٦–٣٫٢] م', 'Width [1.6–3.2] m'), L('رؤوس [—]', 'Heads [—]')], ic.printer],
+      [L('طابعات رول', 'Roll printers'), L('طابعات UV رول', 'UV roll printers'), L('ألوان ثابتة وتجفيف فوري على الرول.', 'Instant curing and lasting colour on roll media.'), [L('عرض [—] م', 'Width [—] m'), L('أبيض + ورنيش', 'White + varnish')], ic.uvroll],
+      [L('طابعات مسطحة', 'Flatbed printers'), L('طابعات UV فلات', 'UV flatbed printers'), L('طباعة مباشرة على الأكريلك والخشب والمعدن والزجاج.', 'Direct printing on acrylic, wood, metal and glass.'), [L('طاولة [—] سم', 'Bed [—] cm'), L('سماكة حتى [—] سم', 'Up to [—] cm thick')], ic.flat],
+      [L('قطع وحفر', 'Cutting & engraving'), L('مكائن CNC راوتر', 'CNC routers'), L('قص وحفر الأكريلك والفوم والخشب والكلادينج.', 'Cut and carve acrylic, foam, wood and cladding.'), [L('مساحة [—]', 'Area [—]'), L('سبندل [—] كيلوواط', 'Spindle [—] kW')], ic.cnc],
+      [L('قطع وحفر', 'Cutting & engraving'), L('مكائن الليزر', 'Laser machines'), L('قص وحفر دقيق للأكريلك والخشب وغيرها.', 'Precise cutting and engraving of acrylic, wood and more.'), ['CO2 [—] W', L('مساحة [—]', 'Area [—]')], ic.laser],
+      [L('الحروف البارزة', 'Channel letters'), L('مكائن تعويج الألمنيوم (لف الحروف)', 'Aluminium letter benders'), L('تشكيل حروف الألمنيوم والستانلس آلياً للحروف المضيئة.', 'Automatic forming of aluminium and stainless letters for lit signs.'), [L('ألمنيوم وستانلس', 'Aluminium & stainless'), L('عرض شريط [—] سم', 'Strip [—] cm')], ic.bend]
+    ].map((m, i) => ({ group: m[0], name: m[1], desc: m[2], specs: m[3], icon: m[4], ph: ph(m[1]), ...rg(i, 3) }));
+    const spots = [
+      { group: L('طابعة سولفنت', 'Solvent printer'), name: L('[اسم وموديل الطابعة]', '[Printer name & model]'), icon: ic.printer, specs: [[L('عرض الطباعة', 'Print width'), '[3.2] m'], [L('الرؤوس', 'Heads'), '[—]'], [L('السرعة', 'Speed'), '[—] m²/h'], [L('نوع الحبر', 'Ink'), L('سولفنت / إيكو سولفنت', 'Solvent / eco-solvent')], [L('الضمان', 'Warranty'), '[—]']] },
+      { group: L('طابعة UV فلات', 'UV flatbed'), name: L('[اسم وموديل الطابعة]', '[Printer name & model]'), icon: ic.flat, specs: [[L('مساحة الطاولة', 'Bed size'), '[—] × [—] cm'], [L('أقصى سماكة', 'Max thickness'), '[—] cm'], [L('الألوان', 'Colours'), 'CMYK + W + V'], [L('الخامات', 'Media'), L('أكريلك، خشب، معدن، زجاج', 'Acrylic, wood, metal, glass')], [L('الضمان', 'Warranty'), '[—]']] },
+      { group: L('ماكنة CNC', 'CNC router'), name: L('[اسم وموديل الماكنة]', '[Machine name & model]'), icon: ic.cnc, specs: [[L('مساحة العمل', 'Work area'), '[130 × 250] cm'], [L('قدرة السبندل', 'Spindle'), '[—] kW'], [L('نظام التحكم', 'Controller'), '[—]'], [L('الخامات', 'Media'), L('أكريلك، فوم، خشب، كلادينج', 'Acrylic, foam, wood, cladding')], [L('الضمان', 'Warranty'), '[—]']] }
+    ];
+    const sp = spots[s.spot];
+    const spotTabs = spots.map((x, i) => ({ group: x.group, name: x.name, pressed: i === s.spot ? 'true' : 'false',
+      pick: () => { if (i === this.state.spot) return; this.setState({ spotOut: true }); setTimeout(() => this.setState({ spot: i, spotOut: false }), 230); } }));
+    const materials = [
+      [L('أكريلك', 'Acrylic'), L('ألواح شفافة وملونة بسماكات متعددة.', 'Clear and coloured sheets in many thicknesses.'), 'M4 4h16v16H4zM4 9h16M9 4v16'],
+      [L('فوم بورد PVC', 'PVC foam board'), L('خفيف ومثالي للطباعة المباشرة والقص.', 'Light and ideal for direct print and cutting.'), 'M3 7l9-4 9 4-9 4zM3 12l9 4 9-4M3 17l9 4 9-4'],
+      [L('أحبار الطباعة', 'Printing inks'), L('سولفنت، إيكو سولفنت، وUV.', 'Solvent, eco-solvent and UV.'), 'M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z'],
+      [L('إنارة LED للإعلانات', 'LED lighting for signs'), L('موديولات، شرائط، ومحوّلات مقاومة للماء.', 'Modules, strips and waterproof drivers.'), 'M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z'],
+      [L('فلكس', 'Flex'), L('أمامي وخلفي الإضاءة بعروض مختلفة.', 'Front-lit and back-lit in several widths.'), 'M5 3h14v14H5zM5 17l3 4h8l3-4'],
+      [L('ستيكر وفينيل', 'Sticker & vinyl'), L('أبيض، شفاف، ون واي فيجن، وملون.', 'White, clear, one-way vision and coloured.'), 'M4 4h11l5 5v11H4zM15 4v5h5'],
+      [L('ألمنيوم وكلادينج', 'Aluminium & cladding'), L('لكسوة الواجهات وتصنيع الحروف.', 'For facades and channel letters.'), 'M4 20V6l8-3 8 3v14M8 10h8M8 14h8'],
+      [L('ستاندات ورول أب', 'Stands & roll-ups'), L('هياكل عرض للمعارض والمحلات.', 'Display hardware for shows and shops.'), 'M7 3h10v14H7zM12 17v4M8 21h8']
+    ].filter((m, i) => !c.mats || c.mats.indexOf(i) !== -1).map((m, i) => ({ name: m[0], desc: m[1], icon: m[2], ...rg(i, 4) }));
+    const parts = ar ? ['رؤوس طباعة', 'مضخات حبر', 'أحزمة ومحركات', 'لوحات تحكم', 'عدسات ومرايا ليزر', 'أنابيب ليزر', 'بتات CNC', 'سبندلات', 'شفرات قص', 'قطع مكائن التعويج']
+      : ['Print heads', 'Ink pumps', 'Belts & motors', 'Control boards', 'Laser lenses & mirrors', 'Laser tubes', 'CNC bits', 'Spindles', 'Cutting blades', 'Bender parts'];
+    const steps = [
+      [L('١', '1'), L('استشارة واختيار', 'Advice & selection'), L('نساعدك تختار الماكنة المناسبة لحجم عملك وميزانيتك.', 'We help you pick the right machine for your workload and budget.')],
+      [L('٢', '2'), L('توصيل وتركيب', 'Delivery & installation'), L('نوصل الماكنة ونركّبها ونشغّلها في موقعك.', 'We deliver, install and commission the machine on site.')],
+      [L('٣', '3'), L('تدريب', 'Training'), L('ندرّب المشغّلين على التشغيل والبرامج والصيانة اليومية.', 'We train operators on the machine, software and daily care.')],
+      [L('٤', '4'), L('صيانة وقطع غيار', 'Service & parts'), L('دعم فني وصيانة دورية وقطع أصلية متوفرة.', 'Technical support, scheduled service and genuine parts.')]
+    ].map((x, i) => ({ n: x[0], name: x[1], desc: x[2], ...rg(i, 4) }));
+    const wcDefs = [ ['all', L('الكل', 'All')], ['light', L('إعلانات ضوئية', 'Illuminated')], ['poster', L('بوسترات', 'Posters')], ['paper', L('طباعة ورقية', 'Paper print')], ['wear', L('طباعة ملابس', 'Apparel')], ['books', L('دفاتر وأجندات', 'Notebooks & planners')] ];
+    const wl = {}; wcDefs.forEach((d) => { wl[d[0]] = d[1]; });
+    const allWorks = [
+      { c: 'light', src: 'assets/img/d38d70f55892e853b8519f8a77491ce6.jpg', title: L('لوحة واجهة مضيئة', 'Illuminated fascia'), desc: L('حروف بارزة مضيئة مع إطار إضاءة سبوت.', 'Raised lit letters with a spotlight frame.'), span: 'w-big' },
+      { c: 'light', src: 'assets/img/cd0f8ddaf49243be8437a51ae7271007.jpg', title: L('حروف معدنية مضيئة', 'Lit metal letters'), desc: L('شعار وحروف بإضاءة خلفية.', 'Logo and letters with back-lighting.'), span: '' },
+      { c: 'poster', src: '', title: L('طباعة بوسترات', 'Poster printing'), desc: L('بوسترات بأحجام مختلفة.', 'Posters in many sizes.'), span: '' },
+      { c: 'light', src: 'assets/img/c84bdf4b1032b23e32c4844161fd680d.jpg', title: L('واجهة بإضاءة خطية LED', 'Linear LED storefront'), desc: L('خطوط إضاءة أفقية مع لوحات مطبوعة.', 'Horizontal light lines with printed panels.'), span: '' },
+      { c: 'wear', src: '', title: L('طباعة على الملابس', 'Apparel printing'), desc: L('تيشيرتات وزي موحّد.', 'T-shirts and uniforms.'), span: '' },
+      { c: 'books', src: '', title: L('دفاتر وأجندات', 'Notebooks & planners'), desc: L('أجندات بهوية الشركة.', 'Branded planners.'), span: '' },
+      { c: 'paper', src: '', title: L('مطبوعات ورقية', 'Paper print'), desc: L('بروشورات وكروت وفولدرات.', 'Brochures, cards and folders.'), span: '' },
+      { c: 'light', src: 'assets/img/2d50e5a79c35014de06e3f860d0e8f5a.jpg', title: L('حروف مضيئة على جدار أخضر', 'Lit letters on a green wall'), desc: L('حروف أكريلك داخل مركز تجاري.', 'Acrylic letters inside a mall.'), span: '' }
+    ];
+    const wlist = allWorks.filter((w) => s.wcat === 'all' || w.c === s.wcat).slice(0, 6);
+    const n = wlist.length;
+    const works = wlist.map((w, i) => ({ ...w, ...rg(i, 3), cat: wl[w.c], hasImg: !!w.src, noImg: !w.src, ph: ph(w.title), span: s.wcat === 'all' ? w.span : '', open: () => this.setState({ lb: i, lbOut: false }) }));
+    const swapLb = (i) => { this.setState({ lbOut: true }); setTimeout(() => this.setState({ lb: i, lbOut: false }), 200); };
+    const wcats = wcDefs.map((d) => ({ label: d[1], pressed: d[0] === s.wcat ? 'true' : 'false',
+      pick: () => { if (d[0] === this.state.wcat) return; this.setState({ wOut: true }); setTimeout(() => this.setState({ wcat: d[0], wOut: false, lb: null }), 220); } }));
+    const lbW = works[Math.min(s.lb ?? 0, Math.max(n - 1, 0))] || { title: '', cat: '', desc: '', hasImg: false, noImg: true, ph: '' };
+    const news = [
+      { isLaunch: true, cat: L('إطلاق منتج', 'Product launch'), date: L('[التاريخ]', '[Date]'), title: launch.name, excerpt: L('كل ما تحتاج معرفته عن الماكنة الجديدة: المواصفات، الاستخدامات، والسعر.', 'Everything about the new machine: specs, applications and price.') },
+      { isLaunch: false, cat: L('دليل الشراء', 'Buying guide'), date: L('[التاريخ]', '[Date]'), title: L('سولفنت أم UV؟ كيف تختار طابعتك الأولى', 'Solvent or UV? Choosing your first printer'), excerpt: L('مقارنة عملية بين التقنيتين حسب نوع العمل والميزانية.', 'A practical comparison by type of work and budget.') },
+      { isLaunch: false, cat: L('صيانة', 'Maintenance'), date: L('[التاريخ]', '[Date]'), title: L('خمس عادات يومية تطيل عمر رؤوس الطباعة', 'Five daily habits that extend print-head life'), excerpt: L('خطوات بسيطة توفر عليك تكلفة استبدال الرؤوس.', 'Simple steps that save you head replacements.') }
+    ].map((a, i) => ({ ...a, ph: L('[صورة المقال]', '[Article image]'), ...rg(i, 3) }));
+    const orderTypes = [ ['machine', L('شراء ماكنة', 'Buy a machine')], ['material', L('مواد إعلان', 'Materials')], ['part', L('قطع غيار', 'Spare parts')], ['print', L('طلب طباعة', 'Print job')] ]
+      .map((o) => ({ label: o[1], pressed: o[0] === s.type ? 'true' : 'false', pick: () => this.setState({ type: o[0] }) }));
+    const dots = [ ['#top', L('البداية', 'Top')], ['#launch', secTitle.launch], ['#machines', t.navMachines], ['#materials', t.navMaterials], ['#works', t.navWorks], ['#news', t.navNews], ['#contact', t.contactEyebrow] ].map((d) => ({ href: d[0], label: d[1] }));
+    const setLang = (l) => { this.setState({ lang: l }); try { localStorage.setItem('nh-lang', l); } catch (e) {} };
+    return {
+      t, lang: ar ? 'ar' : 'en', dir: ar ? 'rtl' : 'ltr',
+      toggleLang: () => setLang(this.state.lang === 'en' ? 'ar' : 'en'),
+      motionClass: motion === 'off' ? 'm-off' : (motion === 'light' ? 'm-light' : ''),
+      navClass: 'nav over' + (navStyle === 'white' ? ' white' : ''),
+      annOn, annText, closeAnn: () => this.setState({ annClosed: true }),
+      heroTitle: (ar ? c.heroTitleAr : c.heroTitleEn) || L('مكائن ومعدات الإعلان… ومواد تجهيزه', 'Sign-making machines… and the materials to run them'),
+      heroSub: (ar ? c.heroSubAr : c.heroSubEn) || L('طابعات سولفنت وUV، مكائن CNC وليزر وتعويج الحروف، قطع الغيار، وكل مواد الإعلان — مع التركيب والتدريب والصيانة.', 'Solvent and UV printers, CNC, laser and letter-bending machines, spare parts and every sign material — with installation, training and service.'),
+      navItems, menuOpen: s.menu, menuExpanded: s.menu ? 'true' : 'false', toggleMenu: () => this.setState({ menu: !this.state.menu }), closeMenu: () => this.setState({ menu: false }),
+      ord, vis, secTitle, slides, launch,
+      machines, spot: { ...sp, ph: ph(sp.name) }, spotTabs, spotSpecs: sp.specs.map((r, i) => ({ k: r[0], v: r[1], i })), spotOut: s.spotOut ? 'out' : '',
+      materials, parts, steps, wcats, works, wOut: s.wOut ? 'out' : '', news, dots,
+      lbOpen: s.lb !== null && n > 0, lb: lbW, lbCount: ((s.lb ?? 0) + 1) + ' / ' + n, lbOutClass: s.lbOut ? 'out' : '',
+      prevLb: () => swapLb((this.state.lb + n - 1) % n), nextLb: () => swapLb((this.state.lb + 1) % n), closeLb: () => this.setState({ lb: null }),
+      orderTypes, sent: s.sent, notSent: !s.sent, send: () => this.setState({ sent: true }), reset: () => this.setState({ sent: false })
+    };
+  }
+}
+</script>
+<script src="assets/dc-lite.js"></script>
+<noscript><p style="padding:24px;font-family:sans-serif">يحتاج هذا الموقع إلى تفعيل JavaScript. / Please enable JavaScript.</p></noscript>
+</body>
+</html>

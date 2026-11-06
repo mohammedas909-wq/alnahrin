@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>النهرين — الأخبار والمقالات | News</title>
+<meta name="description" content="النهرين — بيع مكائن ومعدات الإعلان وقطع غيارها ومواد تجهيز الإعلان في العراق | Al-Nahrain sign-making machines and materials, Iraq">
+<meta name="theme-color" content="#101820">
+<link rel="icon" type="image/png" href="assets/img/452dd46c02f87175012c47942e375813.png">
+<link rel="stylesheet" href="assets/nahrain.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=Readex+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F6F8FA}
+.band{position:relative;overflow:hidden;background:linear-gradient(165deg,#101820 0%,#0F2232 60%,#0B2F46 100%);color:#fff}
+.band .gl{position:absolute;width:680px;height:680px;border-radius:50%;background:radial-gradient(circle,rgba(0,155,213,.36),transparent 64%);filter:blur(16px);top:-300px;right:8%;animation:gm 16s ease-in-out infinite alternate}
+@keyframes gm{from{transform:translate(0,0)}to{transform:translate(-160px,80px)}}
+.fu{animation:fadeUp 1s var(--ease) both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
+.feat{display:flex;flex-wrap:wrap;gap:0;border-radius:28px;overflow:hidden;background:#14202B;border:1px solid #24333F;text-align:start;color:#fff;padding:0;width:100%}
+.feat .ph,.feat img{min-height:380px;height:100%;width:100%;object-fit:cover;display:flex;transition:transform 1.4s var(--ease)}
+.feat:hover .ph,.feat:hover img{transform:scale(1.05)}
+.acard{display:flex;flex-direction:column;overflow:hidden;height:100%;width:100%;text-align:start;padding:0;color:#101820}
+.reader{position:fixed;inset:0;z-index:90;background:#FFFFFF;color:#101820;overflow-y:auto;animation:readIn .6s var(--ease) both}
+@keyframes readIn{from{clip-path:inset(100% 0 0 0)}to{clip-path:inset(0 0 0 0)}}
+.reader .prog>*{animation:fadeUp .8s var(--ease) backwards;animation-delay:calc(.25s + var(--i,0) * 90ms)}
+.reader p{font-size:19px;line-height:1.95;margin:0;color:#26343F}
+.share{min-height:44px;padding:0 16px;border-radius:12px;border:1px solid #DDE4EA;background:#fff;color:#101820;font-weight:600;font-size:14px;display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+.share:hover{border-color:#009BD5;color:#101820}
+@media (max-width:760px){
+  .nh section > div{padding-inline:16px!important}
+  .feat .ph,.feat img{min-height:240px}
+  .reader p{font-size:17px}
+  .annbar .ann-long{display:none}
+}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script type="text/x-dc-template" id="dc-template">
+
+<div class="nh" dir="{{dir}}" lang="{{lang}}" style="font-family: 'IBM Plex Sans Arabic', 'Readex Pro', system-ui, sans-serif; color: #101820; background: #F6F8FA; line-height: 1.7; min-width: 0; min-height: 100vh; overflow-x: clip">
+<div class="curtain" aria-hidden="true"></div>
+
+<sc-if value="{{annOn}}" hint-placeholder-val="{{ true }}">
+<div class="annbar" role="region" aria-label="{{t.annAria}}"><div style="max-width: 1320px; margin: 0 auto; padding: 0 16px; min-height: 42px; display: flex; align-items: center; justify-content: center; gap: 12px">
+<span class="ann-tag">{{t.newTag}}</span><button type="button" onClick="{{openLaunch}}" style="position: relative; z-index: 1; background: transparent; border: 0; color: #101820; font-weight: 600; font-size: 14px; min-height: 40px">{{annText}} <span aria-hidden="true">{{t.arrow}}</span></button>
+<button type="button" class="ann-x" onClick="{{closeAnn}}" aria-label="{{t.close}}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+</div></div>
+</sc-if>
+
+<header class="nav">
+<div style="max-width: 1320px; height: 100%; margin: 0 auto; padding: 0 24px; display: flex; gap: 16px; align-items: center; justify-content: space-between; box-sizing: border-box">
+<a href="index.html" class="brand" aria-label="{{t.home}}" style="display: flex; align-items: center; gap: 12px; text-decoration: none"><span class="logo-m" style="height: 46px"></span><span class="logo-w" style="height: 26px"></span></a>
+<nav class="nav-links" aria-label="{{t.mainNav}}" style="font-size: 15px"><sc-for list="{{navItems}}" as="n" hint-placeholder-count="5"><a class="{{n.cls}}" href="{{n.href}}">{{n.label}}</a></sc-for></nav>
+<div style="display: flex; gap: 8px; align-items: center">
+<button type="button" class="lang-btn" onClick="{{toggleLang}}" lang="{{t.otherLangCode}}" aria-label="{{t.langAria}}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18"></path></svg>{{t.otherLang}}</button>
+<a class="btn btn-sky nav-cta" href="index.html" style="min-height: 44px; padding: 0 18px; font-size: 15px">{{t.quote}}</a>
+<button type="button" class="iconbtn burger" onClick="{{toggleMenu}}" aria-label="{{t.menu}}" aria-expanded="{{menuExpanded}}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
+</div>
+</div>
+</header>
+<sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}"><nav class="mmenu" aria-label="{{t.menu}}"><sc-for list="{{navItems}}" as="n" hint-placeholder-count="5"><a href="{{n.href}}">{{n.label}}</a></sc-for></nav></sc-if>
+
+<section class="band">
+<div class="gl" aria-hidden="true"></div>
+<div style="position: relative; max-width: 1320px; margin: 0 auto; padding: 56px 24px 64px; display: flex; flex-direction: column; gap: 28px">
+<div class="fu" style="display: flex; flex-direction: column; gap: 10px">
+<nav aria-label="{{t.crumb}}" style="font-size: 14px; color: #A9B8C6"><a href="index.html" style="color: #A9B8C6">{{t.homeLabel}}</a> / {{t.title}}</nav>
+<h1 style="margin: 0; font-family: 'Readex Pro', sans-serif; font-size: clamp(32px, 4.6vw, 56px); line-height: 1.15">{{t.title}}</h1>
+<p style="margin: 0; color: #C9D6E0; font-size: 18px; max-width: 640px">{{t.sub}}</p>
+</div>
+<button type="button" class="feat fu" onClick="{{featured.open}}" style="animation-delay: .4s" aria-label="{{featured.title}}">
+<div style="flex: 1.3 1 460px; min-width: 0; overflow: hidden; position: relative">
+<sc-if value="{{featured.hasImg}}" hint-placeholder-val="{{ false }}"><img src="{{featured.img}}" alt=""></sc-if>
+<sc-if value="{{featured.noImg}}" hint-placeholder-val="{{ true }}"><span class="ph" style="font-size: 14px">{{featured.ph}}</span></sc-if>
+<sc-if value="{{featured.isLaunch}}" hint-placeholder-val="{{ true }}"><span class="new-badge" style="position: absolute; top: 18px; inset-inline-start: 18px; font-size: 14px; padding: 6px 14px">{{t.newTag}}</span></sc-if>
+</div>
+<div style="flex: 1 1 380px; min-width: 0; padding: 36px; display: flex; flex-direction: column; gap: 14px; justify-content: center; box-sizing: border-box">
+<span style="font-size: 14px; color: #7FD3F5; font-weight: 600">{{featured.cat}} · {{featured.date}}</span>
+<strong style="font-family: 'Readex Pro', sans-serif; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.3">{{featured.title}}</strong>
+<span style="color: #C9D6E0; font-size: 17px">{{featured.excerpt}}</span>
+<span class="btn btn-sky" style="align-self: flex-start; margin-top: 8px">{{t.read}}</span>
+</div>
+</button>
+</div>
+</section>
+
+<section>
+<div style="max-width: 1320px; margin: 0 auto; padding: 44px 24px 90px">
+<div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center; margin-bottom: 28px">
+<div role="group" aria-label="{{t.filter}}" style="display: flex; flex-wrap: wrap; gap: 8px"><sc-for list="{{cats}}" as="c" hint-placeholder-count="5"><button type="button" class="chip-l" onClick="{{c.pick}}" aria-pressed="{{c.pressed}}">{{c.label}}</button></sc-for></div>
+<div style="position: relative; flex: 0 1 320px; min-width: 220px">
+<label for="n-q" class="sr">{{t.search}}</label>
+<input id="n-q" class="field field-l" type="search" placeholder="{{t.search}}" value="{{query}}" onInput="{{onSearch}}" style="padding-inline-start: 44px">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#55636F" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="position: absolute; top: 16px; inset-inline-start: 16px"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg>
+</div>
+</div>
+<sc-if value="{{empty}}" hint-placeholder-val="{{ false }}"><div style="border: 1px dashed #C5CFD8; border-radius: 22px; padding: 56px; text-align: center; color: #55636F; background: #fff">{{t.none}}</div></sc-if>
+<div class="swap stag {{gridOut}}" style="display: flex; flex-wrap: wrap; gap: 22px">
+<sc-for list="{{list}}" as="a" hint-placeholder-count="6">
+<div style="--i: {{a.i}}; flex: 1 1 320px; min-width: 0">
+<div class="grow-sm" style="height: 100%">
+<button type="button" class="lcard lift-l acard" onClick="{{a.open}}">
+<div class="zoom" style="height: 210px; width: 100%; position: relative"><div class="zi ph ph-g" style="height: 100%">{{a.ph}}</div><sc-if value="{{a.isLaunch}}" hint-placeholder-val="{{ false }}"><span class="new-badge" style="position: absolute; top: 14px; inset-inline-start: 14px">{{t.newTag}}</span></sc-if></div>
+<div style="padding: 22px; display: flex; flex-direction: column; gap: 8px; flex-grow: 1; width: 100%; box-sizing: border-box">
+<span style="font-size: 13px; color: #00739E; font-weight: 600">{{a.cat}} · {{a.date}} · {{a.mins}}</span>
+<strong style="font-family: 'Readex Pro', sans-serif; font-size: 20px; font-weight: 600; line-height: 1.4">{{a.title}}</strong>
+<span style="font-size: 15px; color: #4F5D69">{{a.excerpt}}</span>
+<span style="margin-top: auto; padding-top: 8px; color: #00739E; font-weight: 700; font-size: 15px">{{t.read}} {{t.arrow}}</span>
+</div>
+</button>
+</div>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<!-- اشتراك بالإعلانات -->
+<section class="light">
+<div style="max-width: 1320px; margin: 0 auto; padding: 80px 24px">
+<div class="grow" style="background: #101820; color: #fff; border-radius: 28px; padding: clamp(24px, 4vw, 48px); display: flex; flex-wrap: wrap; gap: 28px; align-items: center; justify-content: space-between; position: relative; overflow: hidden">
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+<span class="eyebrow">{{t.subEyebrow}}</span>
+<strong style="font-family: 'Readex Pro', sans-serif; font-size: clamp(24px, 3vw, 36px); line-height: 1.3">{{t.subTitle}}</strong>
+<span style="color: #C9D6E0">{{t.subText}}</span>
+</div>
+<sc-if value="{{notSubbed}}" hint-placeholder-val="{{ true }}">
+<form style="flex: 1 1 360px; min-width: 0; display: flex; gap: 10px; flex-wrap: wrap">
+<label for="sub-phone" class="sr">{{t.waNumber}}</label>
+<input id="sub-phone" class="field" type="tel" placeholder="{{t.waNumber}}" style="flex: 1 1 200px">
+<button type="button" class="btn btn-sky" onClick="{{subscribe}}" style="border: 0">{{t.subscribe}}</button>
+</form>
+</sc-if>
+<sc-if value="{{subbed}}" hint-placeholder-val="{{ false }}"><span class="modal" role="status" style="flex: 1 1 360px; font-weight: 600; color: #7FD3F5">{{t.subbed}}</span></sc-if>
+</div>
+</div>
+</section>
+
+<footer style="background: #101820; color: #A9B8C6; font-size: 14px">
+<div style="max-width: 1320px; margin: 0 auto; padding: 28px 24px; display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center">
+<span style="display: flex; align-items: center; gap: 10px; color: #fff"><span class="logo-m" style="height: 34px"></span><span class="logo-w" style="height: 18px"></span></span>
+<span>{{t.rights}} · <a href="admin.html" style="color: #A9B8C6">{{t.admin}}</a></span>
+</div>
+</footer>
+
+<!-- قارئ المقال -->
+<sc-if value="{{readerOpen}}" hint-placeholder-val="{{ false }}">
+<article class="reader" role="dialog" aria-label="{{art.title}}">
+<div style="position: sticky; top: 0; z-index: 2; background: rgba(255,255,255,.92); backdrop-filter: blur(12px); border-bottom: 1px solid #EDF1F4">
+<div style="max-width: 860px; margin: 0 auto; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; gap: 12px">
+<button type="button" onClick="{{closeReader}}" class="share">{{t.back}}</button>
+<span style="font-size: 13px; color: #55636F">{{art.mins}}</span>
+</div>
+</div>
+<div class="prog" style="max-width: 860px; margin: 0 auto; padding: 32px 20px 80px; display: flex; flex-direction: column; gap: 22px">
+<span style="--i: 0; font-size: 14px; color: #00739E; font-weight: 600">{{art.cat}} · {{art.date}}</span>
+<h2 style="--i: 1; margin: 0; font-family: 'Readex Pro', sans-serif; font-size: clamp(28px, 4vw, 44px); line-height: 1.25">{{art.title}}</h2>
+<div style="--i: 2; border-radius: 22px; overflow: hidden; position: relative">
+<sc-if value="{{art.hasImg}}" hint-placeholder-val="{{ false }}"><img src="{{art.img}}" alt="" style="width: 100%; max-height: 460px; object-fit: cover; display: block"></sc-if>
+<sc-if value="{{art.noImg}}" hint-placeholder-val="{{ true }}"><div class="ph ph-g" style="height: 380px">{{art.ph}}</div></sc-if>
+</div>
+<sc-for list="{{art.body}}" as="p" hint-placeholder-count="4"><p style="--i: 3">{{p}}</p></sc-for>
+<sc-if value="{{art.isLaunch}}" hint-placeholder-val="{{ false }}">
+<div style="--i: 4; background: #EAF6FC; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 14px">
+<strong style="font-family: 'Readex Pro', sans-serif; font-size: 20px">{{t.specs}}</strong>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px"><sc-for list="{{art.specs}}" as="s" hint-placeholder-count="4"><span style="background: #fff; border: 1px solid #D3E5EF; border-radius: 12px; padding: 10px 14px; display: flex; flex-direction: column"><span style="font-size: 12px; color: #4F5D69">{{s.k}}</span><strong style="font-weight: 600">{{s.v}}</strong></span></sc-for></div>
+<div style="display: flex; flex-wrap: wrap; gap: 10px"><a class="btn btn-sky" href="index.html">{{t.quote}}</a><a class="btn btn-line" href="store.html">{{t.toStore}}</a></div>
+</div>
+</sc-if>
+<div style="--i: 5; display: flex; flex-wrap: wrap; gap: 10px; padding-top: 18px; border-top: 1px solid #EDF1F4; align-items: center">
+<span style="font-weight: 600; margin-inline-end: 6px">{{t.share}}</span>
+<a class="share" href="https://wa.me/?text=[رابط المقال]"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.4 7.9L3 21l1.2-4.4A9 9 0 1 1 21 12z"></path></svg>WhatsApp</a>
+<a class="share" href="https://www.facebook.com/sharer/sharer.php">Facebook</a>
+<button type="button" class="share" onClick="{{copyLink}}">{{copyLabel}}</button>
+</div>
+</div>
+</article>
+</sc-if>
+<a class="fab" href="https://wa.me/9647XXXXXXXXX" aria-label="WhatsApp"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.4 7.9L3 21l1.2-4.4A9 9 0 1 1 21 12z"></path></svg></a>
+</div>
+</script>
+<script type="text/x-dc" id="dc-logic" data-props='{"$preview":{"width":1440,"height":2400}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    let lang = 'ar'; try { lang = localStorage.getItem('nh-lang') || 'ar'; } catch (e) {}
+    this.state = { lang, cfg: this.readCfg(), cat: 'all', query: '', gridOut: false, open: null, menu: false, annClosed: false, subbed: false, copied: false };
+  }
+  readCfg() { try { return JSON.parse(localStorage.getItem('nh-site') || '{}') || {}; } catch (e) { return {}; } }
+  componentDidMount() {
+    this.onStore = (e) => { if (e.key === 'nh-site') this.setState({ cfg: this.readCfg() }); if (e.key === 'nh-lang') { try { this.setState({ lang: localStorage.getItem('nh-lang') || 'ar' }); } catch (x) {} } };
+    try { window.addEventListener('storage', this.onStore); } catch (e) {}
+  }
+  componentWillUnmount() { try { window.removeEventListener('storage', this.onStore); } catch (e) {} }
+  renderVals() {
+    const s = this.state; const ar = s.lang !== 'en'; const L = (a, e) => (ar ? a : e); const c = s.cfg || {};
+    const t = {
+      newTag: L('جديد', 'NEW'), annAria: L('إعلان منتج جديد', 'New product announcement'), close: L('إغلاق', 'Close'), arrow: L('←', '→'),
+      home: L('النهرين — الرئيسية', 'Al-Nahrain — Home'), homeLabel: L('الرئيسية', 'Home'), mainNav: L('القائمة الرئيسية', 'Main menu'), menu: L('القائمة', 'Menu'),
+      otherLang: L('English', 'عربي'), otherLangCode: L('en', 'ar'), langAria: L('Switch to English', 'التبديل إلى العربية'), quote: L('اطلب عرض سعر', 'Request a quote'),
+      crumb: L('مسار التصفح', 'Breadcrumb'), title: L('الأخبار والمقالات', 'News & articles'),
+      sub: L('إطلاقات المكائن الجديدة، أدلة الشراء، ونصائح الصيانة من فريق النهرين.', 'New machine launches, buying guides and maintenance tips from the Al-Nahrain team.'),
+      read: L('اقرأ المقال', 'Read article'), filter: L('تصنيف المقالات', 'Filter articles'), search: L('ابحث في المقالات', 'Search articles'), none: L('لا توجد مقالات مطابقة.', 'No matching articles.'),
+      subEyebrow: L('لا تفوّت الجديد', 'Never miss a launch'), subTitle: L('اشترك ليصلك إعلان كل ماكنة جديدة على واتساب', 'Get every new machine announcement on WhatsApp'),
+      subText: L('رسالة واحدة عند وصول منتج جديد أو عرض خاص — بدون إزعاج.', 'One message when a new product or special offer arrives — no spam.'),
+      waNumber: L('رقم الواتساب', 'WhatsApp number'), subscribe: L('اشترك', 'Subscribe'), subbed: L('تم الاشتراك — سنرسل لك الجديد أولاً بأول.', 'You\'re subscribed — we\'ll send you every launch.'),
+      rights: L('© [السنة] النهرين', '© [Year] Al-Nahrain'), admin: L('دخول الإدارة', 'Admin login'), back: L('→ رجوع للأخبار', '← Back to news'),
+      specs: L('المواصفات الرئيسية', 'Key specifications'), toStore: L('تصفّح في المتجر', 'View in store'), share: L('شارك:', 'Share:')
+    };
+    const navItems = [ ['index.html', L('الرئيسية', 'Home')], ['store.html', L('المتجر', 'Store')], ['works.html', L('أعمالنا', 'Our work')], ['news.html', L('الأخبار', 'News')], ['index.html', L('تواصل معنا', 'Contact')] ]
+      .map((n, i) => ({ href: n[0], label: n[1], cls: 'navlink' + (i === 3 ? ' on' : '') }));
+    const catDefs = [ ['all', L('الكل', 'All')], ['launch', L('إطلاق منتجات', 'Product launches')], ['guide', L('أدلة الشراء', 'Buying guides')], ['tips', L('صيانة ونصائح', 'Maintenance & tips')], ['company', L('أخبار الشركة', 'Company news')] ];
+    const cl = {}; catDefs.forEach((d) => { cl[d[0]] = d[1]; });
+    const lc = c.launch || {};
+    const defArticles = [
+      { id: 1, cat: 'launch', featured: true, img: lc.img || '', titleAr: lc.nameAr || 'وصلت طابعة UV فلات [الموديل] إلى معرض النهرين', titleEn: lc.nameEn || 'The UV flatbed printer [model] has arrived at Al-Nahrain',
+        exAr: 'اطبع مباشرة على الأكريلك والخشب والمعدن والزجاج — المواصفات والسعر وموعد التوفر.', exEn: 'Print straight onto acrylic, wood, metal and glass — specs, price and availability.',
+        bodyAr: ['يسعدنا في النهرين الإعلان عن وصول طابعة UV فلات [الموديل] إلى معرضنا، لتكون إضافة لكل ورشة إعلان تبحث عن الطباعة المباشرة على الخامات الصلبة.', 'تطبع الماكنة على الأكريلك والفوم بورد والخشب والمعدن والزجاج بطبقة أبيض وورنيش، مما يفتح لك أعمالاً جديدة مثل اللوحات الداخلية والهدايا الدعائية والديكور.', 'تشمل عملية البيع التوصيل والتركيب وتدريب المشغّلين، مع ضمان [—] وقطع غيار متوفرة في مخازننا. [اكتب هنا تفاصيل العرض الخاص بالإطلاق إن وُجد].'],
+        bodyEn: ['Al-Nahrain is pleased to announce the arrival of the UV flatbed printer [model] at our showroom — a strong addition for any sign shop that wants to print directly on rigid media.', 'It prints on acrylic, foam board, wood, metal and glass with white and varnish layers, opening up new work such as interior signs, promotional gifts and décor.', 'Every sale includes delivery, installation and operator training, with a [—] warranty and spare parts in stock. [Add launch-offer details here if any].'] },
+      { id: 2, cat: 'guide', titleAr: 'سولفنت أم UV؟ كيف تختار طابعتك الأولى', titleEn: 'Solvent or UV? Choosing your first printer', exAr: 'مقارنة عملية بين التقنيتين حسب نوع العمل والميزانية.', exEn: 'A practical comparison by type of work and budget.',
+        bodyAr: ['[نص المقال] يعتمد اختيار الطابعة على نوع الأعمال التي تنفذها أكثر: الفلكس والستيكر للوحات الخارجية، أم الطباعة المباشرة على الخامات الصلبة.', '[أكمل المقال: التكلفة، سرعة الإنتاج، تكلفة الحبر، والصيانة].'], bodyEn: ['[Article text] The right printer depends on the work you do most: flex and vinyl for outdoor signs, or direct print on rigid media.', '[Continue: cost, production speed, ink cost and maintenance].'] },
+      { id: 3, cat: 'tips', titleAr: 'خمس عادات يومية تطيل عمر رؤوس الطباعة', titleEn: 'Five daily habits that extend print-head life', exAr: 'خطوات بسيطة توفر عليك تكلفة استبدال الرؤوس.', exEn: 'Simple steps that save you head replacements.',
+        bodyAr: ['[نص المقال] رؤوس الطباعة أغلى قطعة في الماكنة، والعناية اليومية بها توفر الكثير.', '[أكمل المقال بالخطوات الخمس].'], bodyEn: ['[Article text] Print heads are the most expensive part of the machine; daily care saves a lot.', '[Continue with the five steps].'] },
+      { id: 4, cat: 'guide', titleAr: 'CNC أم ليزر؟ دليل قص الأكريلك والفوم', titleEn: 'CNC or laser? A guide to cutting acrylic and foam', exAr: 'متى تختار الراوتر ومتى يكون الليزر أفضل.', exEn: 'When to choose a router and when laser is better.', bodyAr: ['[نص المقال].'], bodyEn: ['[Article text].'] },
+      { id: 5, cat: 'company', titleAr: 'النهرين في معرض [اسم المعرض]', titleEn: 'Al-Nahrain at [exhibition name]', exAr: 'زورونا في جناحنا لمشاهدة المكائن تعمل مباشرة.', exEn: 'Visit our stand to see the machines running live.', bodyAr: ['[نص الخبر].'], bodyEn: ['[News text].'] },
+      { id: 6, cat: 'tips', titleAr: 'كيف تختار إنارة LED المناسبة للحروف المضيئة', titleEn: 'Choosing the right LED for illuminated letters', exAr: 'الموديولات، الشرائط، والمحوّلات — الفرق والاستخدام.', exEn: 'Modules, strips and drivers — differences and uses.', bodyAr: ['[نص المقال].'], bodyEn: ['[Article text].'] }
+    ];
+    const src = (c.articles && c.articles.length ? c.articles : defArticles).filter((a) => a.status !== 'draft');
+    const dec = (a, i) => { const body = (ar ? a.bodyAr : (a.bodyEn || a.bodyAr)) || []; const words = body.join(' ').split(/\s+/).length;
+      return { i, id: a.id, isLaunch: a.cat === 'launch', cat: cl[a.cat] || a.cat, date: a.date || L('[التاريخ]', '[Date]'), title: ar ? a.titleAr : (a.titleEn || a.titleAr), excerpt: ar ? a.exAr : (a.exEn || a.exAr),
+        body, img: a.img || '', hasImg: !!a.img, noImg: !a.img, ph: L('[صورة المقال]', '[Article image]'), mins: Math.max(1, Math.round(words / 180)) + L(' د قراءة', ' min read'),
+        specs: [ [L('مساحة الطاولة', 'Bed size'), '[—] × [—] cm'], [L('أقصى سماكة', 'Max thickness'), '[—] cm'], [L('الألوان', 'Colours'), 'CMYK + W + V'], [L('الضمان', 'Warranty'), '[—]'] ].map((r) => ({ k: r[0], v: r[1] })),
+        open: () => this.setState({ open: a.id, copied: false }) }; };
+    const all = src.map(dec);
+    const featured = all.find((a) => src[a.i].featured) || all[0] || dec(defArticles[0], 0);
+    const q = s.query.trim();
+    const list = all.filter((a) => a.id !== featured.id && (s.cat === 'all' || src[a.i].cat === s.cat) && (!q || a.title.indexOf(q) !== -1 || a.excerpt.indexOf(q) !== -1)).map((a, i) => ({ ...a, i }));
+    const cats = catDefs.map((d) => ({ label: d[1], pressed: d[0] === s.cat ? 'true' : 'false',
+      pick: () => { if (d[0] === this.state.cat) return; this.setState({ gridOut: true }); setTimeout(() => this.setState({ cat: d[0], gridOut: false }), 200); } }));
+    const art = all.find((a) => a.id === s.open) || featured;
+    const ann = c.ann || {};
+    const setLang = (l) => { this.setState({ lang: l }); try { localStorage.setItem('nh-lang', l); } catch (e) {} };
+    return {
+      t, lang: ar ? 'ar' : 'en', dir: ar ? 'rtl' : 'ltr', toggleLang: () => setLang(this.state.lang === 'en' ? 'ar' : 'en'),
+      navItems, menuOpen: s.menu, menuExpanded: s.menu ? 'true' : 'false', toggleMenu: () => this.setState({ menu: !this.state.menu }),
+      annOn: ann.on !== false && !s.annClosed, annText: (ar ? ann.ar : ann.en) || L('وصلت طابعة UV فلات الجديدة — اقرأ الإعلان', 'The new UV flatbed printer has arrived — read the announcement'),
+      closeAnn: () => this.setState({ annClosed: true }), openLaunch: () => this.setState({ open: featured.id }),
+      featured, cats, list, empty: list.length === 0, query: s.query, onSearch: (e) => this.setState({ query: e.target.value }), gridOut: s.gridOut ? 'out' : '',
+      readerOpen: s.open !== null, art, closeReader: () => this.setState({ open: null }),
+      copyLabel: s.copied ? L('تم النسخ ✓', 'Copied ✓') : L('نسخ الرابط', 'Copy link'),
+      copyLink: () => { try { navigator.clipboard.writeText('[رابط المقال]'); } catch (e) {} this.setState({ copied: true }); },
+      notSubbed: !s.subbed, subbed: s.subbed, subscribe: () => this.setState({ subbed: true })
+    };
+  }
+}
+</script>
+<script src="assets/dc-lite.js"></script>
+<noscript><p style="padding:24px;font-family:sans-serif">يحتاج هذا الموقع إلى تفعيل JavaScript. / Please enable JavaScript.</p></noscript>
+</body>
+</html>

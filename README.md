@@ -1,30 +1,29 @@
-# المتجر — مكائن، مواد، قطع غيار — design reference
+# موقع النهرين — نسخة جاهزة للرفع
 
-This is a design mockup created in a visual design tool, exported as a
-standalone page. Treat it as a REFERENCE MOCKUP, not production code:
-the markup and inline styles carry the design's precise values — colors,
-font sizes, spacing, radii, shadows, layout — which an implementation
-should replicate faithfully in its own components and styling system
-rather than copy wholesale.
+موقع ثابت (HTML + CSS + JavaScript) يعمل على GitHub Pages أو أي استضافة، بدون أي برنامج إضافي.
 
-## Contents
+## محتويات المجلد
+| الملف | الصفحة |
+|---|---|
+| `index.html` | الصفحة الرئيسية |
+| `store.html` | المتجر (مكائن، قطع غيار، مواد) |
+| `works.html` | أعمالنا |
+| `news.html` | الأخبار والمقالات |
+| `admin.html` | لوحة التحكم |
+| `assets/` | الصور، ملف التنسيق `nahrain.css`، ومحرّك الصفحات `dc-lite.js` |
 
-- `Store.dc.html` — the artboard (a Design Component: an `<x-dc>`
-  template + a small logic class). The values to replicate live in its
-  inline `style="…"` attributes and the `<helmet><style>` block.
-- `nahrain.css` — referenced resource
-- `assets/` — files uploaded to the design (images, fonts, media)
-- `support.js`, `vendor/react*.js` — the runtime that renders the
-  component in a browser; not part of the design.
+## الرفع على GitHub Pages
+1. افتح المستودع على GitHub ← **Add file** ← **Upload files**.
+2. اسحب **محتويات** هذا المجلد (وليس المجلد نفسه) بحيث يكون `index.html` في أعلى المستودع مباشرة، ثم **Commit changes**.
+3. **Settings** ← **Pages** ← Source: **Deploy from a branch** ← Branch: `main` و `/ (root)` ← **Save**.
+4. انتظر دقيقة أو دقيقتين، ثم افتح الرابط الذي يظهر أعلى صفحة Pages.
 
-## Uploaded files
+> ملاحظة: الملف `.nojekyll` مخفي في بعض الأنظمة — ارفعه أيضاً إن أمكن (ليس ضرورياً لعمل الموقع).
 
-Images, fonts and media uploaded to the design are written once each under
-`assets/` — 4 in this export — and the exported files refer to them there. A
-reference a script puts together while the page runs (for example
-`"/_blob/" + id`) is not rewritten and does not load from this folder.
+## عن لوحة التحكم
+- التعديلات من `admin.html` تُحفظ في متصفحك فقط (localStorage)، فتظهر لك أنت على نفس الجهاز.
+- لتظهر التعديلات لكل الزوار يجب ربط الموقع بقاعدة بيانات وتسجيل دخول حقيقي — هذا هو الخطوة التالية في البرمجة.
+- شاشة تسجيل الدخول في هذه النسخة شكلية ولا تحمي اللوحة؛ لا تعتمد عليها للحماية.
 
-## Viewing
-
-Serve the folder (e.g. `python3 -m http.server`) and open `Store.dc.html`;
-some browsers block the scripts over file://.
+## قبل الإطلاق الرسمي
+استبدل كل ما بين أقواس `[ ]` (الأسعار، الموديلات، رقم الواتساب `9647XXXXXXXXX`، العنوان) وأضف صور المكائن والمواد الحقيقية.

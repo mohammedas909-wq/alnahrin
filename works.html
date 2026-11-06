@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>النهرين — أعمالنا | Our work</title>
+<meta name="description" content="النهرين — بيع مكائن ومعدات الإعلان وقطع غيارها ومواد تجهيز الإعلان في العراق | Al-Nahrain sign-making machines and materials, Iraq">
+<meta name="theme-color" content="#101820">
+<link rel="icon" type="image/png" href="assets/img/452dd46c02f87175012c47942e375813.png">
+<link rel="stylesheet" href="assets/nahrain.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=Readex+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F6F8FA}
+.band{position:relative;overflow:hidden;background:linear-gradient(165deg,#101820 0%,#0F2232 60%,#0B2F46 100%);color:#fff}
+.band .gl{position:absolute;width:680px;height:680px;border-radius:50%;background:radial-gradient(circle,rgba(0,155,213,.36),transparent 64%);filter:blur(16px);top:-300px;left:8%;animation:gm 16s ease-in-out infinite alternate}
+@keyframes gm{from{transform:translate(0,0)}to{transform:translate(160px,80px)}}
+.hero-img{border-radius:24px;overflow:hidden;height:100%;min-height:340px}
+.hero-img img{width:100%;height:100%;object-fit:cover;display:block;animation:kb 18s ease-out both}
+@keyframes kb{from{transform:scale(1.12)}to{transform:scale(1)}}
+.fu{animation:fadeUp 1s var(--ease) both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
+.wgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:280px;gap:18px}
+.w-big{grid-row:span 2}
+.wi{position:relative;display:block;width:100%;height:100%;padding:0;border:0;border-radius:22px;overflow:hidden;background:#EDF1F4;text-align:start;color:#fff}
+.wi img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.2s var(--ease),filter .6s}
+.wi .ph{width:100%;height:100%;transition:transform 1.2s var(--ease)}
+.wi:hover img,.wi:focus-visible img{transform:scale(1.07);filter:brightness(.72)}
+.wi:hover .ph{transform:scale(1.05)}
+.wi .cap{position:absolute;inset-inline:0;bottom:0;padding:52px 20px 18px;background:linear-gradient(to top,rgba(8,14,20,.9),rgba(8,14,20,0));display:flex;flex-direction:column;gap:2px;transform:translateY(26px);transition:transform .5s var(--ease)}
+.wi .cap .det{opacity:0;transition:opacity .4s}
+.wi:hover .cap,.wi:focus-visible .cap{transform:none}.wi:hover .cap .det,.wi:focus-visible .cap .det{opacity:1}
+.lb-img{transition:opacity .25s,transform .35s var(--ease)}.lb-img.out{opacity:0;transform:scale(.97)}
+@media (max-width:900px){.wgrid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:230px}}
+@media (max-width:560px){.wgrid{grid-template-columns:minmax(0,1fr)}.w-big{grid-row:auto}}
+@media (max-width:760px){.nh section > div{padding-inline:16px!important}.hero-img{min-height:240px}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script type="text/x-dc-template" id="dc-template">
+
+<div class="nh" dir="{{dir}}" lang="{{lang}}" style="font-family: 'IBM Plex Sans Arabic', 'Readex Pro', system-ui, sans-serif; color: #101820; background: #F6F8FA; line-height: 1.7; min-width: 0; min-height: 100vh; overflow-x: clip">
+<div class="curtain" aria-hidden="true"></div>
+
+<sc-if value="{{annOn}}" hint-placeholder-val="{{ true }}">
+<div class="annbar" role="region" aria-label="{{t.annAria}}"><div style="max-width: 1320px; margin: 0 auto; padding: 0 16px; min-height: 42px; display: flex; align-items: center; justify-content: center; gap: 12px">
+<span class="ann-tag">{{t.newTag}}</span><a href="store.html" style="position: relative; z-index: 1">{{annText}} <span aria-hidden="true">{{t.arrow}}</span></a>
+<button type="button" class="ann-x" onClick="{{closeAnn}}" aria-label="{{t.close}}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+</div></div>
+</sc-if>
+
+<header class="nav">
+<div style="max-width: 1320px; height: 100%; margin: 0 auto; padding: 0 24px; display: flex; gap: 16px; align-items: center; justify-content: space-between; box-sizing: border-box">
+<a href="index.html" class="brand" aria-label="{{t.home}}" style="display: flex; align-items: center; gap: 12px; text-decoration: none"><span class="logo-m" style="height: 46px"></span><span class="logo-w" style="height: 26px"></span></a>
+<nav class="nav-links" aria-label="{{t.mainNav}}" style="font-size: 15px"><sc-for list="{{navItems}}" as="n" hint-placeholder-count="5"><a class="{{n.cls}}" href="{{n.href}}">{{n.label}}</a></sc-for></nav>
+<div style="display: flex; gap: 8px; align-items: center">
+<button type="button" class="lang-btn" onClick="{{toggleLang}}" lang="{{t.otherLangCode}}" aria-label="{{t.langAria}}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18"></path></svg>{{t.otherLang}}</button>
+<a class="btn btn-sky nav-cta" href="https://wa.me/9647XXXXXXXXX" style="min-height: 44px; padding: 0 18px; font-size: 15px">{{t.orderPrint}}</a>
+<button type="button" class="iconbtn burger" onClick="{{toggleMenu}}" aria-label="{{t.menu}}" aria-expanded="{{menuExpanded}}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
+</div>
+</div>
+</header>
+<sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}"><nav class="mmenu" aria-label="{{t.menu}}"><sc-for list="{{navItems}}" as="n" hint-placeholder-count="5"><a href="{{n.href}}">{{n.label}}</a></sc-for></nav></sc-if>
+
+<section class="band">
+<div class="gl" aria-hidden="true"></div>
+<div style="position: relative; max-width: 1320px; margin: 0 auto; padding: 64px 24px; display: flex; flex-wrap: wrap; gap: 40px; align-items: stretch">
+<div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 16px; justify-content: center">
+<nav aria-label="{{t.crumb}}" class="fu" style="font-size: 14px; color: #A9B8C6"><a href="index.html" style="color: #A9B8C6">{{t.homeLabel}}</a> / {{t.worksLabel}}</nav>
+<span class="eyebrow fu" style="animation-delay: .5s">{{t.worksLabel}}</span>
+<h1 class="fu" style="animation-delay: .7s; margin: 0; font-family: 'Readex Pro', sans-serif; font-size: clamp(34px, 5vw, 60px); line-height: 1.15">{{t.title}}</h1>
+<p class="fu" style="animation-delay: .9s; margin: 0; color: #C9D6E0; font-size: 18px; max-width: 560px">{{t.sub}}</p>
+</div>
+<div class="fu" style="animation-delay: .6s; flex: 1 1 440px; min-width: 0"><div class="hero-img"><img src="assets/img/d38d70f55892e853b8519f8a77491ce6.jpg" alt="{{t.heroAlt}}"></div></div>
+</div>
+</section>
+
+<section>
+<div style="max-width: 1320px; margin: 0 auto; padding: 48px 24px 100px">
+<div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center; margin-bottom: 28px">
+<div role="group" aria-label="{{t.filter}}" style="display: flex; flex-wrap: wrap; gap: 8px"><sc-for list="{{cats}}" as="c" hint-placeholder-count="7"><button type="button" class="chip-l" onClick="{{c.pick}}" aria-pressed="{{c.pressed}}">{{c.label}} <span style="opacity: .6; font-weight: 500">{{c.n}}</span></button></sc-for></div>
+<span style="color: #55636F; font-size: 15px">{{count}} {{t.items}}</span>
+</div>
+<div class="wgrid swap stag {{gridOut}}">
+<sc-for list="{{works}}" as="w" hint-placeholder-count="9">
+<div class="{{w.span}}" style="--i: {{w.i}}">
+<div class="grow" style="height: 100%; animation-range: entry {{w.r1}} cover {{w.r2}}">
+<button type="button" class="wi" onClick="{{w.open}}" aria-label="{{w.title}}">
+<sc-if value="{{w.hasImg}}" hint-placeholder-val="{{ true }}"><img src="{{w.src}}" alt="{{w.title}}" loading="lazy"></sc-if>
+<sc-if value="{{w.noImg}}" hint-placeholder-val="{{ false }}"><span class="ph ph-g"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#009BD5" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{w.icon}}"></path></svg><span>{{w.ph}}</span></span></sc-if>
+<span class="cap"><span style="font-size: 12px; color: #7FD3F5; font-weight: 600">{{w.cat}}</span><strong style="font-family: 'Readex Pro', sans-serif; font-size: 18px; font-weight: 600">{{w.title}}</strong><span class="det" style="font-size: 14px; color: #D5E0E8">{{w.desc}}</span></span>
+</button>
+</div>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<section class="light">
+<div style="max-width: 1320px; margin: 0 auto; padding: 90px 24px; display: flex; flex-wrap: wrap; gap: 32px; align-items: center; justify-content: space-between">
+<div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
+<span class="eyebrow t1">{{t.ctaEyebrow}}</span>
+<h2 class="h2 t2">{{t.ctaTitle}}</h2>
+<p class="muted t3" style="margin: 0; font-size: 18px">{{t.ctaText}}</p>
+</div>
+<div class="t4" style="display: flex; flex-wrap: wrap; gap: 12px"><a class="btn btn-sky" href="https://wa.me/9647XXXXXXXXX">{{t.orderPrint}}</a><a class="btn btn-navy" href="store.html">{{t.browseMachines}}</a></div>
+</div>
+</section>
+
+<footer style="background: #101820; color: #A9B8C6; font-size: 14px">
+<div style="max-width: 1320px; margin: 0 auto; padding: 28px 24px; display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center">
+<span style="display: flex; align-items: center; gap: 10px; color: #fff"><span class="logo-m" style="height: 34px"></span><span class="logo-w" style="height: 18px"></span></span>
+<span>{{t.rights}} · <a href="admin.html" style="color: #A9B8C6">{{t.admin}}</a></span>
+</div>
+</footer>
+
+<sc-if value="{{lbOpen}}" hint-placeholder-val="{{ false }}">
+<div class="shade" onClick="{{closeLb}}"></div>
+<div style="position: fixed; inset: 0; z-index: 90; display: flex; align-items: center; justify-content: center; padding: 20px; pointer-events: none">
+<div class="modal" role="dialog" aria-label="{{lb.title}}" style="pointer-events: auto; width: min(1100px, 100%); max-height: 100%; display: flex; flex-direction: column; gap: 14px">
+<div class="lb-img {{lbOutClass}}" style="border-radius: 18px; overflow: hidden; background: #0B141C; min-height: 300px; display: flex">
+<sc-if value="{{lb.hasImg}}" hint-placeholder-val="{{ true }}"><img src="{{lb.src}}" alt="{{lb.title}}" style="width: 100%; max-height: 72vh; object-fit: contain; display: block"></sc-if>
+<sc-if value="{{lb.noImg}}" hint-placeholder-val="{{ false }}"><span class="ph" style="flex: 1; min-height: 380px; font-size: 15px">{{lb.ph}}</span></sc-if>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; color: #FFFFFF">
+<div style="display: flex; flex-direction: column"><span style="font-size: 13px; color: #7FD3F5">{{lb.cat}} · {{lbCount}}</span><strong style="font-family: 'Readex Pro', sans-serif; font-size: 21px; font-weight: 600">{{lb.title}}</strong><span style="color: #C3D2DE; font-size: 15px">{{lb.desc}}</span></div>
+<div style="display: flex; gap: 8px">
+<button type="button" class="iconbtn" onClick="{{prevLb}}" aria-label="{{t.prev}}" style="color: #fff"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="{{t.prevIcon}}"></path></svg></button>
+<button type="button" class="iconbtn" onClick="{{nextLb}}" aria-label="{{t.next}}" style="color: #fff"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="{{t.nextIcon}}"></path></svg></button>
+<button type="button" class="iconbtn" onClick="{{closeLb}}" aria-label="{{t.close}}" style="color: #fff"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+</div>
+</div>
+</div>
+</div>
+</sc-if>
+<a class="fab" href="https://wa.me/9647XXXXXXXXX" aria-label="WhatsApp"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.4 7.9L3 21l1.2-4.4A9 9 0 1 1 21 12z"></path></svg></a>
+</div>
+</script>
+<script type="text/x-dc" id="dc-logic" data-props='{"$preview":{"width":1440,"height":2200}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    let lang = 'ar'; try { lang = localStorage.getItem('nh-lang') || 'ar'; } catch (e) {}
+    let cfg = {}; try { cfg = JSON.parse(localStorage.getItem('nh-site') || '{}') || {}; } catch (e) {}
+    this.state = { lang, cfg, annClosed: false, cat: 'all', gridOut: false, lb: null, lbOut: false, menu: false };
+  }
+  componentDidMount() {
+    this.onStore = (e) => { try { if (e.key === 'nh-site') this.setState({ cfg: JSON.parse(localStorage.getItem('nh-site') || '{}') || {} }); if (e.key === 'nh-lang') this.setState({ lang: localStorage.getItem('nh-lang') || 'ar' }); } catch (x) {} };
+    try { window.addEventListener('storage', this.onStore); } catch (e) {}
+  }
+  componentWillUnmount() { try { window.removeEventListener('storage', this.onStore); } catch (e) {} }
+  renderVals() {
+    const s = this.state; const ar = s.lang !== 'en'; const L = (a, e) => (ar ? a : e); const c = s.cfg || {};
+    const t = {
+      newTag: L('جديد', 'NEW'), annAria: L('إعلان منتج جديد', 'New product announcement'), close: L('إغلاق', 'Close'), arrow: L('←', '→'),
+      home: L('النهرين — الرئيسية', 'Al-Nahrain — Home'), homeLabel: L('الرئيسية', 'Home'), mainNav: L('القائمة الرئيسية', 'Main menu'), menu: L('القائمة', 'Menu'),
+      otherLang: L('English', 'عربي'), otherLangCode: L('en', 'ar'), langAria: L('Switch to English', 'التبديل إلى العربية'), orderPrint: L('اطلب طباعة', 'Order a print job'),
+      crumb: L('مسار التصفح', 'Breadcrumb'), worksLabel: L('من أعمالنا', 'Our work'), title: L('أعمال الطباعة والإعلان', 'Print & sign work'),
+      sub: L('إعلانات ضوئية، بوسترات، مطبوعات ورقية، طباعة على الملابس، ودفاتر وأجندات — نماذج مما نفّذناه لعملائنا.', 'Illuminated signs, posters, paper print, apparel, notebooks and planners — a selection of work we produced for clients.'),
+      heroAlt: L('لوحة واجهة ليلية مضيئة من أعمال النهرين', 'Illuminated night fascia by Al-Nahrain'), filter: L('تصنيف الأعمال', 'Filter work'), items: L('عمل', 'projects'),
+      ctaEyebrow: L('لديك عمل مشابه؟', 'Have a similar project?'), ctaTitle: L('نطبع وننفّذ… ونبيعك المكائن والمواد أيضاً', 'We print and build… and sell the machines and materials too'),
+      ctaText: L('اطلب طباعة أو إعلاناً ضوئياً، أو تصفّح المكائن والمواد إذا كنت تجهّز ورشتك الخاصة.', 'Order a print or lit sign, or browse machines and materials to equip your own shop.'),
+      browseMachines: L('تصفّح المكائن', 'Browse machines'), rights: L('© [السنة] النهرين', '© [Year] Al-Nahrain'), admin: L('دخول الإدارة', 'Admin login'),
+      prev: L('السابق', 'Previous'), next: L('التالي', 'Next'), prevIcon: ar ? 'M9 6l6 6-6 6' : 'M15 6l-6 6 6 6', nextIcon: ar ? 'M15 6l-6 6 6 6' : 'M9 6l6 6-6 6'
+    };
+    const navItems = [ ['index.html', L('الرئيسية', 'Home')], ['store.html', L('المتجر', 'Store')], ['works.html', L('أعمالنا', 'Our work')], ['news.html', L('الأخبار', 'News')], ['index.html', L('تواصل معنا', 'Contact')] ]
+      .map((n, i) => ({ href: n[0], label: n[1], cls: 'navlink' + (i === 2 ? ' on' : '') }));
+    const icons = { light: 'M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z', poster: 'M5 3h14v18H5zM8 7h8M8 11h8M8 15h5', paper: 'M6 2h9l3 3v17H6zM9 8h6M9 12h6M9 16h4', wear: 'M8 3l-5 3 2 4 2-1v12h10V9l2 1 2-4-5-3a4 4 0 0 1-8 0z', books: 'M4 4h7a3 3 0 0 1 3 3v14a2 2 0 0 0-2-2H4zM20 4h-6M20 4v15h-6', facade: 'M4 21V5l8-2 8 2v16M4 21h16M9 9h6M9 13h6' };
+    const defs = [ ['all', L('الكل', 'All')], ['light', L('إعلانات ضوئية', 'Illuminated')], ['facade', L('واجهات ولوحات', 'Facades & signs')], ['poster', L('بوسترات', 'Posters')], ['paper', L('طباعة ورقية', 'Paper print')], ['wear', L('طباعة ملابس', 'Apparel')], ['books', L('دفاتر وأجندات', 'Notebooks & planners')] ];
+    const cl = {}; defs.forEach((d) => { cl[d[0]] = d[1]; });
+    const W = (cc, src, tA, tE, dA, dE, big) => ({ c: cc, src: src ? 'assets/img/' + src + '.jpg' : '', title: L(tA, tE), desc: L(dA, dE), big });
+    const all = [
+      W('light', 'd38d70f55892e853b8519f8a77491ce6', 'لوحة واجهة مضيئة', 'Illuminated fascia', 'حروف بارزة مضيئة مع إطار إضاءة سبوت.', 'Raised lit letters with a spotlight frame.', true),
+      W('facade', '47ce93c87d091c5f47a17854ad026389', 'واجهة مبنى متكاملة', 'Full building facade', 'كلادينج مع تلبيس زجاج مطبوع بعرض المبنى.', 'Cladding with full-width printed window graphics.'),
+      W('poster', '', 'بوسترات إعلانية', 'Advertising posters', 'طباعة بوسترات بأحجام مختلفة.', 'Posters in many sizes.'),
+      W('light', 'cd0f8ddaf49243be8437a51ae7271007', 'حروف معدنية مضيئة', 'Lit metal letters', 'شعار وحروف بإضاءة خلفية ولوحة مضيئة.', 'Logo and letters with back-lighting.'),
+      W('wear', '', 'تيشيرتات بهوية الشركة', 'Branded T-shirts', 'طباعة على الملابس والزي الموحّد.', 'Apparel and uniform printing.'),
+      W('books', '', 'أجندات سنوية', 'Annual planners', 'أجندات ودفاتر بشعار العميل.', 'Planners and notebooks with client branding.', true),
+      W('paper', '', 'بروشورات وفولدرات', 'Brochures & folders', 'مطبوعات ورقية بكل الأحجام.', 'Paper print in every size.'),
+      W('light', 'c84bdf4b1032b23e32c4844161fd680d', 'واجهة بإضاءة خطية LED', 'Linear LED storefront', 'خطوط إضاءة أفقية مع لوحات مطبوعة.', 'Horizontal light lines with printed panels.'),
+      W('paper', '', 'كروت وأوراق رسمية', 'Cards & stationery', 'كروت شخصية، ظروف، وأوراق رسمية.', 'Business cards, envelopes and letterheads.'),
+      W('light', '2d50e5a79c35014de06e3f860d0e8f5a', 'حروف مضيئة على جدار أخضر', 'Lit letters on a green wall', 'حروف أكريلك مضيئة داخل مركز تجاري.', 'Illuminated acrylic letters inside a mall.'),
+      W('poster', '', 'رول أب وبنرات', 'Roll-ups & banners', 'مطبوعات للمعارض والفعاليات.', 'Print for shows and events.'),
+      W('wear', '', 'قبعات وحقائب مطبوعة', 'Printed caps & bags', 'هدايا دعائية بهوية العميل.', 'Branded promotional gifts.'),
+      W('books', '', 'دفاتر ملاحظات', 'Notebooks', 'دفاتر بأغلفة مطبوعة.', 'Notebooks with printed covers.')
+    ];
+    const list = all.filter((w) => s.cat === 'all' || w.c === s.cat);
+    const n = list.length;
+    const works = list.map((w, i) => ({ ...w, i, cat: cl[w.c], icon: icons[w.c], hasImg: !!w.src, noImg: !w.src, ph: L('[صورة من أعمالكم: ', '[Your photo: ') + w.title + ']',
+      span: w.big && s.cat === 'all' ? 'w-big' : '', r1: (i % 3) * 5 + '%', r2: (36 + (i % 3) * 5) + '%', open: () => this.setState({ lb: i, lbOut: false }) }));
+    const cats = defs.map((d) => ({ label: d[1], n: d[0] === 'all' ? all.length : all.filter((w) => w.c === d[0]).length, pressed: d[0] === s.cat ? 'true' : 'false',
+      pick: () => { if (d[0] === this.state.cat) return; this.setState({ gridOut: true }); setTimeout(() => this.setState({ cat: d[0], gridOut: false, lb: null }), 220); } }));
+    const swapLb = (i) => { this.setState({ lbOut: true }); setTimeout(() => this.setState({ lb: i, lbOut: false }), 200); };
+    const lb = works[Math.min(s.lb ?? 0, Math.max(n - 1, 0))] || { title: '', cat: '', desc: '', hasImg: false, noImg: true, ph: '' };
+    const ann = c.ann || {};
+    const setLang = (l) => { this.setState({ lang: l }); try { localStorage.setItem('nh-lang', l); } catch (e) {} };
+    return {
+      t, lang: ar ? 'ar' : 'en', dir: ar ? 'rtl' : 'ltr', toggleLang: () => setLang(this.state.lang === 'en' ? 'ar' : 'en'), navItems,
+      annOn: ann.on !== false && !s.annClosed, annText: (ar ? ann.ar : ann.en) || L('وصلت طابعة UV فلات الجديدة — اكتشفها في المتجر', 'The new UV flatbed printer has arrived — see it in the store'), closeAnn: () => this.setState({ annClosed: true }),
+      menuOpen: s.menu, menuExpanded: s.menu ? 'true' : 'false', toggleMenu: () => this.setState({ menu: !this.state.menu }),
+      cats, works, count: n, gridOut: s.gridOut ? 'out' : '',
+      lbOpen: s.lb !== null && n > 0, lb, lbCount: ((s.lb ?? 0) + 1) + ' / ' + n, lbOutClass: s.lbOut ? 'out' : '',
+      prevLb: () => swapLb((this.state.lb + n - 1) % n), nextLb: () => swapLb((this.state.lb + 1) % n), closeLb: () => this.setState({ lb: null })
+    };
+  }
+}
+</script>
+<script src="assets/dc-lite.js"></script>
+<noscript><p style="padding:24px;font-family:sans-serif">يحتاج هذا الموقع إلى تفعيل JavaScript. / Please enable JavaScript.</p></noscript>
+</body>
+</html>
