@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>النهرين — المتجر | Store</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./nahrain.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=Readex+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F6F8FA}
+.band{position:relative;overflow:hidden;background:linear-gradient(165deg,#101820 0%,#0F2232 60%,#0B2F46 100%);color:#fff}
+.band .gl{position:absolute;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(0,155,213,.36),transparent 64%);filter:blur(16px);top:-280px;right:6%;animation:gm 16s ease-in-out infinite alternate}
+@keyframes gm{from{transform:translate(0,0)}to{transform:translate(-160px,80px)}}
+.dep{flex:1 1 160px;min-height:84px;border-radius:18px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.04);color:#fff;display:flex;align-items:center;gap:14px;padding:0 18px;text-align:start;transition:all .35s var(--ease)}
+.dep:hover{border-color:var(--sky);background:rgba(0,155,213,.1)}
+.dep[aria-pressed="true"]{background:#FFFFFF;color:#101820;border-color:#fff}
+.dep .di{width:44px;height:44px;border-radius:12px;background:rgba(0,155,213,.18);color:#38B6E6;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.dep[aria-pressed="true"] .di{background:#EAF6FC;color:#009BD5}
+.sub{display:flex;justify-content:space-between;align-items:center;width:100%;min-height:44px;padding:0 12px;border-radius:12px;font-size:15px;text-align:start;background:transparent;color:#3D4A55;border:1px solid transparent;transition:all .25s}
+.sub:hover{background:#F6F8FA;color:#101820}
+.sub[aria-pressed="true"]{background:#EAF6FC;border-color:#9FD6EE;color:#101820;font-weight:600}
+.pcard{display:flex;flex-direction:column;overflow:hidden;height:100%}
+.pimg{position:relative;height:200px;width:100%;padding:0;border:0;display:block;background:transparent}
+.added{background:#101820!important;color:#fff!important;border-color:#101820!important}
+.qbtn{width:40px;height:40px;border-radius:10px;border:1px solid #DDE4EA;background:#fff;color:#101820;font-size:18px}
+.qbtn:hover{border-color:var(--sky)}
+.szb{min-height:40px;padding:0 14px;border-radius:10px;border:1px solid #DDE4EA;background:#fff;color:#101820;font-size:14px;font-weight:600;transition:all .25s}
+.szb[aria-pressed="true"]{background:#101820;border-color:#101820;color:#fff}
+.lt .st-ok{background:#D9F0FA;color:#005A7E;border:1px solid #8FD0EC}
+.lt .st-low{background:#FFFFFF;color:#26343F;border:1px dashed #8A9AA8}
+.lt .st-out{background:#EDF1F4;color:#55636F;border:1px solid #DDE4EA}
+.ib-l{width:44px;height:44px;border-radius:12px;border:1px solid #DDE4EA;background:#fff;color:#101820;display:inline-flex;align-items:center;justify-content:center;transition:all .25s}
+.ib-l:hover{border-color:var(--sky)}
+.ib-l:disabled{opacity:.4}
+@media (max-width:760px){.nh section > div{padding-inline:16px!important}.dep{flex-basis:140px;min-height:64px}}
+</style>
+</helmet>
+<div class="nh lt" dir="{{dir}}" lang="{{lang}}" style="font-family: 'IBM Plex Sans Arabic', 'Readex Pro', system-ui, sans-serif; color: #101820; background: #F6F8FA; line-height: 1.7; min-width: 0; min-height: 100vh; overflow-x: clip">
+<div class="curtain" aria-hidden="true"></div>
+
+<sc-if value="{{annOn}}" hint-placeholder-val="{{ true }}">
+<div class="annbar" role="region" aria-label="{{t.annAria}}"><div style="max-width: 1320px; margin: 0 auto; padding: 0 16px; min-height: 42px; display: flex; align-items: center; justify-content: center; gap: 12px">
+<span class="ann-tag">{{t.newTag}}</span><button type="button" onClick="{{openNew}}" style="position: relative; z-index: 1; background: transparent; border: 0; color: #101820; font-weight: 600; font-size: 14px; min-height: 40px">{{annText}} <span aria-hidden="true">{{t.arrow}}</span></button>
+<button type="button" class="ann-x" onClick="{{closeAnn}}" aria-label="{{t.close}}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+</div></div>
+</sc-if>
+
+<header class="nav">
+<div style="max-width: 1320px; height: 100%; margin: 0 auto; padding: 0 24px; display: flex; gap: 16px; align-items: center; justify-content: space-between; box-sizing: border-box">
+<a href="Main.dc.html" class="brand" aria-label="{{t.home}}" style="display: flex; align-items: center; gap: 12px; text-decoration: none"><span class="logo-m" style="height: 46px"></span><span class="logo-w" style="height: 26px"></span></a>
+<nav class="nav-links" aria-label="{{t.mainNav}}" style="font-size: 15px"><sc-for list="{{navItems}}" as="n" hint-placeholder-count="5"><a class="{{n.cls}}" href="{{n.href}}">{{n.label}}</a></sc-for></nav>
+<div style="display: flex; gap: 8px; align-items: center">
+<button type="button" class="lang-btn" onClick="{{toggleLang}}" lang="{{t.otherLangCode}}" aria-label="{{t.langAria}}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18"></path></svg>{{t.otherLang}}</button>
+<button type="button" class="btn btn-ghost {{bumpClass}}" onClick="{{openCart}}" style="min-height: 44px; padding: 0 14px; font-size: 15px" aria-label="{{t.cartAria}}">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2"></path><circle cx="10" cy="20" r="1.3"></circle><circle cx="17" cy="20" r="1.3"></circle></svg>
+<span style="min-width: 22px; height: 22px; border-radius: 11px; background: #009BD5; color: #101820; font-size: 12px; display: inline-flex; align-items: center; justify-content: center; padding: 0 6px; box-sizing: border-box">{{cartCount}}</span>
+</button>
+<button type="button" class="iconbtn burger" onClick="{{toggleMenu}}" aria-label="{{t.menu}}" aria-expanded="{{menuExpanded}}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
+</div>
+</div>
+</header>
+<sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}"><nav class="mmenu" aria-label="{{t.menu}}"><sc-for list="{{navItems}}" as="n" hint-placeholder-count="5"><a href="{{n.href}}">{{n.label}}</a></sc-for></nav></sc-if>
+
+<section class="band">
+<div class="gl" aria-hidden="true"></div>
+<div style="position: relative; max-width: 1320px; margin: 0 auto; padding: 56px 24px 40px; display: flex; flex-direction: column; gap: 14px">
+<nav aria-label="{{t.crumb}}" style="font-size: 14px; color: #A9B8C6"><a href="Main.dc.html" style="color: #A9B8C6">{{t.homeLabel}}</a> / {{t.storeLabel}}</nav>
+<h1 style="margin: 0; font-family: 'Readex Pro', sans-serif; font-size: clamp(32px, 4.6vw, 56px); line-height: 1.15">{{t.title}}</h1>
+<p style="margin: 0; color: #C9D6E0; font-size: 18px; max-width: 640px">{{t.sub}}</p>
+<div style="max-width: 600px; margin-top: 6px; position: relative">
+<label for="s-q" class="sr">{{t.search}}</label>
+<input id="s-q" class="field" type="search" placeholder="{{t.searchPh}}" value="{{query}}" onInput="{{onSearch}}" style="height: 56px; padding-inline-start: 48px; background: rgba(10,17,24,.6)">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A9B8C6" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="position: absolute; top: 18px; inset-inline-start: 17px"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg>
+</div>
+<div role="group" aria-label="{{t.deps}}" style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px">
+<sc-for list="{{deps}}" as="d" hint-placeholder-count="5">
+<button type="button" class="dep" onClick="{{d.pick}}" aria-pressed="{{d.pressed}}"><span class="di"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{d.icon}}"></path></svg></span><span style="display: flex; flex-direction: column; line-height: 1.35"><strong style="font-family: 'Readex Pro', sans-serif; font-size: 17px">{{d.label}}</strong><span style="font-size: 13px; opacity: .7">{{d.n}} {{t.items}}</span></span></button>
+</sc-for>
+</div>
+</div>
+</section>
+
+<section>
+<div style="max-width: 1320px; margin: 0 auto; padding: 36px 24px 100px; display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start">
+<aside style="flex: 1 1 230px; max-width: 100%; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<div role="group" aria-label="{{t.cats}}" class="lcard" style="padding: 14px; display: flex; flex-direction: column; gap: 2px">
+<span style="font-family: 'Readex Pro', sans-serif; font-weight: 600; font-size: 17px; margin: 0 6px 8px">{{depTitle}}</span>
+<sc-for list="{{subs}}" as="c" hint-placeholder-count="6"><button type="button" class="sub" onClick="{{c.pick}}" aria-pressed="{{c.pressed}}"><span>{{c.label}}</span><span style="font-size: 13px; color: #55636F">{{c.n}}</span></button></sc-for>
+</div>
+<div class="lcard" style="padding: 16px; display: flex; flex-direction: column; gap: 10px">
+<label for="s-sort" style="font-family: 'Readex Pro', sans-serif; font-weight: 600; font-size: 17px">{{t.sort}}</label>
+<select id="s-sort" class="field field-l" onChange="{{onSort}}"><option value="default">{{t.sortNew}}</option><option value="name">{{t.sortName}}</option><option value="stock">{{t.sortStock}}</option></select>
+<label style="display: flex; gap: 10px; align-items: center; min-height: 44px; font-size: 15px"><input type="checkbox" checked="{{onlyStock}}" onChange="{{toggleStock}}" style="width: 20px; height: 20px; accent-color: #009BD5">{{t.onlyStock}}</label>
+</div>
+<a href="https://wa.me/9647XXXXXXXXX" style="background: #101820; color: #fff; border-radius: 22px; padding: 20px; text-decoration: none; display: flex; flex-direction: column; gap: 4px"><strong style="font-family: 'Readex Pro', sans-serif">{{t.adviceQ}}</strong><span style="font-size: 14px; color: #C9D6E0">{{t.adviceA}} {{t.arrow}}</span></a>
+</aside>
+
+<div style="flex: 999 1 620px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px">
+<h2 style="margin: 0; font-family: 'Readex Pro', sans-serif; font-size: 24px; font-weight: 600">{{listTitle}}</h2>
+<span style="font-size: 15px; color: #55636F">{{count}} {{t.items}}</span>
+</div>
+<sc-if value="{{empty}}" hint-placeholder-val="{{ false }}"><div style="border: 1px dashed #C5CFD8; border-radius: 22px; padding: 56px; text-align: center; color: #55636F; background: #fff">{{t.none}}</div></sc-if>
+<div class="swap stag {{gridOut}}" style="display: flex; flex-wrap: wrap; gap: 20px">
+<sc-for list="{{shown}}" as="p" hint-placeholder-count="9">
+<div style="--i: {{p.i}}; flex: 1 1 260px; min-width: 0">
+<div class="grow-sm" style="height: 100%">
+<article class="lcard lift-l pcard">
+<button type="button" class="pimg zoom" onClick="{{p.view}}" aria-label="{{p.name}}">
+<div class="zi ph ph-g" style="height: 100%"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#009BD5" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{p.icon}}"></path></svg><span>{{p.ph}}</span></div>
+<span class="pill {{p.stClass}}" style="position: absolute; top: 12px; inset-inline-end: 12px">{{p.status}}</span>
+<sc-if value="{{p.isNew}}" hint-placeholder-val="{{ false }}"><span class="new-badge" style="position: absolute; top: 12px; inset-inline-start: 12px">{{t.newTag}}</span></sc-if>
+</button>
+<div style="padding: 18px; display: flex; flex-direction: column; gap: 8px; flex-grow: 1">
+<span style="font-size: 13px; color: #00739E; font-weight: 600">{{p.subLabel}}</span>
+<h3 style="margin: 0; font-family: 'Readex Pro', sans-serif; font-size: 18px; font-weight: 600; line-height: 1.4">{{p.name}}</h3>
+<span style="color: #4F5D69; font-size: 14px">{{p.desc}}</span>
+<div style="display: flex; flex-wrap: wrap; gap: 6px"><sc-for list="{{p.sizes}}" as="z" hint-placeholder-count="2"><span style="font-size: 12px; font-weight: 600; background: #EDF1F4; color: #3D4A55; border-radius: 7px; padding: 2px 8px">{{z}}</span></sc-for></div>
+<div style="margin-top: auto; padding-top: 14px; border-top: 1px solid #EDF1F4; display: flex; flex-direction: column; gap: 12px">
+<span style="font-family: 'Readex Pro', sans-serif; font-weight: 700; font-size: 18px">[—] <span style="font-size: 13px; color: #55636F; font-weight: 400">{{t.iqd}} {{p.unitLabel}}</span></span>
+<div style="display: flex; gap: 8px">
+<button type="button" class="btn btn-sky" onClick="{{p.view}}" disabled="{{p.out}}" style="flex: 1; min-height: 44px; padding: 0 12px; font-size: 15px; border: 0">{{p.primaryLabel}}</button>
+<button type="button" class="ib-l {{p.addedClass}}" onClick="{{p.add}}" disabled="{{p.out}}" aria-label="{{p.addAria}}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{p.addIcon}}"></path></svg></button>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</sc-for>
+</div>
+</div>
+</div>
+</section>
+
+<footer style="background: #101820; color: #A9B8C6; font-size: 14px">
+<div style="max-width: 1320px; margin: 0 auto; padding: 28px 24px; display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center">
+<span style="display: flex; align-items: center; gap: 10px; color: #fff"><span class="logo-m" style="height: 34px"></span><span class="logo-w" style="height: 18px"></span></span>
+<span>{{t.rights}} · <a href="Admin.dc.html" style="color: #A9B8C6">{{t.admin}}</a></span>
+</div>
+</footer>
+
+<sc-if value="{{qvOpen}}" hint-placeholder-val="{{ false }}">
+<div class="shade" onClick="{{closeQv}}"></div>
+<div style="position: fixed; inset: 0; z-index: 90; display: flex; align-items: center; justify-content: center; padding: 16px; pointer-events: none">
+<div class="modal" role="dialog" aria-label="{{qv.name}}" style="pointer-events: auto; width: min(960px, 100%); max-height: calc(100% - 32px); overflow-y: auto; background: #FFFFFF; border-radius: 26px; display: flex; flex-wrap: wrap; box-shadow: 0 40px 100px rgba(0,0,0,.35)">
+<div class="ph ph-g" style="flex: 1 1 360px; min-height: 340px; font-size: 14px; position: relative"><svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="#009BD5" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{qv.icon}}"></path></svg><span>{{qv.ph}}</span><sc-if value="{{qv.isNew}}" hint-placeholder-val="{{ false }}"><span class="new-badge" style="position: absolute; top: 16px; inset-inline-start: 16px">{{t.newTag}}</span></sc-if></div>
+<div style="flex: 1 1 380px; padding: 28px; display: flex; flex-direction: column; gap: 14px; box-sizing: border-box">
+<div style="display: flex; justify-content: space-between; gap: 12px; align-items: flex-start">
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 13px; color: #00739E; font-weight: 600">{{qv.subLabel}}</span><h2 style="margin: 0; font-family: 'Readex Pro', sans-serif; font-size: 24px; font-weight: 600; line-height: 1.35">{{qv.name}}</h2></div>
+<button type="button" class="ib-l" onClick="{{closeQv}}" aria-label="{{t.close}}" style="flex-shrink: 0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+</div>
+<span class="pill {{qv.stClass}}" style="align-self: flex-start">{{qv.status}}</span>
+<p style="margin: 0; color: #3D4A55">{{qv.desc}}</p>
+<sc-if value="{{qv.isMachine}}" hint-placeholder-val="{{ false }}"><div style="border: 1px solid #EDF1F4; border-radius: 14px; overflow: hidden"><sc-for list="{{qvSpecs}}" as="r" hint-placeholder-count="3"><div style="display: flex; justify-content: space-between; gap: 12px; padding: 10px 14px; border-bottom: 1px solid #EDF1F4; font-size: 15px"><span style="color: #55636F">{{r.k}}</span><strong style="font-weight: 600">{{r.v}}</strong></div></sc-for></div></sc-if>
+<div style="display: flex; flex-direction: column; gap: 8px"><span style="font-weight: 600">{{qv.optLabel}}</span><div role="group" aria-label="{{qv.optLabel}}" style="display: flex; flex-wrap: wrap; gap: 8px"><sc-for list="{{qvSizes}}" as="z" hint-placeholder-count="2"><button type="button" class="szb" onClick="{{z.pick}}" aria-pressed="{{z.pressed}}">{{z.label}}</button></sc-for></div></div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 0; border-block: 1px solid #EDF1F4">
+<span style="font-family: 'Readex Pro', sans-serif; font-weight: 700; font-size: 24px">[—] <span style="font-size: 14px; color: #55636F; font-weight: 400">{{t.iqd}} {{qv.unitLabel}}</span></span>
+<div style="display: flex; align-items: center; gap: 8px"><button type="button" class="qbtn" onClick="{{qvDec}}" aria-label="{{t.less}}">−</button><span style="min-width: 28px; text-align: center; font-weight: 700">{{qvQty}}</span><button type="button" class="qbtn" onClick="{{qvInc}}" aria-label="{{t.more}}">+</button></div>
+</div>
+<div style="display: flex; gap: 10px; flex-wrap: wrap">
+<button type="button" class="btn btn-sky" onClick="{{qvOrder}}" disabled="{{qv.out}}" style="flex: 1 1 180px; border: 0">{{qv.orderLabel}}</button>
+<button type="button" class="btn btn-line" onClick="{{qvAdd}}" disabled="{{qv.out}}" style="flex: 1 1 140px">{{t.addCart}}</button>
+</div>
+<sc-if value="{{qv.isMachine}}" hint-placeholder-val="{{ false }}"><span style="font-size: 14px; color: #55636F">{{t.includes}}</span></sc-if>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{cartOpen}}" hint-placeholder-val="{{ false }}">
+<div class="shade" onClick="{{closeCart}}"></div>
+<div class="drawer" role="dialog" aria-label="{{drawerTitle}}" style="background: #FFFFFF; border-color: #DDE4EA; color: #101820">
+<div style="padding: 20px 24px; border-bottom: 1px solid #EDF1F4; display: flex; justify-content: space-between; align-items: center">
+<span style="font-family: 'Readex Pro', sans-serif; font-size: 22px; font-weight: 600">{{drawerTitle}}</span>
+<button type="button" class="ib-l" onClick="{{closeCart}}" aria-label="{{t.close}}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+</div>
+<div style="flex: 1; overflow-y: auto; padding: 20px 24px; display: flex; flex-direction: column; gap: 12px">
+<sc-if value="{{stepCart}}" hint-placeholder-val="{{ true }}">
+<sc-if value="{{cartEmpty}}" hint-placeholder-val="{{ false }}"><p style="color: #55636F; margin: 0">{{t.emptyCart}}</p></sc-if>
+<div class="stag" style="display: flex; flex-direction: column; gap: 12px">
+<sc-for list="{{cartItems}}" as="ci" hint-placeholder-count="2">
+<div style="--i: {{ci.i}}; display: flex; gap: 14px; align-items: center; background: #F6F8FA; border: 1px solid #EDF1F4; border-radius: 16px; padding: 12px">
+<div class="ph ph-g" style="width: 60px; height: 60px; border-radius: 10px; flex-shrink: 0; padding: 0"></div>
+<div style="flex: 1; min-width: 0; display: flex; flex-direction: column"><span style="font-weight: 600">{{ci.name}}</span><span style="font-size: 13px; color: #55636F">{{ci.note}}</span></div>
+<div style="display: flex; align-items: center; gap: 6px"><button type="button" class="qbtn" onClick="{{ci.dec}}" aria-label="{{t.less}}">−</button><span style="min-width: 22px; text-align: center; font-weight: 700">{{ci.qty}}</span><button type="button" class="qbtn" onClick="{{ci.inc}}" aria-label="{{t.more}}">+</button></div>
+</div>
+</sc-for>
+</div>
+</sc-if>
+<sc-if value="{{stepCheckout}}" hint-placeholder-val="{{ false }}">
+<div class="modal" style="display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; flex-direction: column; gap: 6px"><label for="c-name" style="font-weight: 600">{{t.nameCo}}</label><input id="c-name" class="field field-l" type="text"></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><label for="c-phone" style="font-weight: 600">{{t.phone}}</label><input id="c-phone" class="field field-l" type="tel" placeholder="07XX XXX XXXX"></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><label for="c-gov" style="font-weight: 600">{{t.province}}</label><select id="c-gov" class="field field-l"><sc-for list="{{govs}}" as="g" hint-placeholder-count="18"><option>{{g}}</option></sc-for></select></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><label for="c-addr" style="font-weight: 600">{{t.address}}</label><textarea id="c-addr" class="field field-l" rows="3" placeholder="{{t.addressPh}}"></textarea></div>
+<span style="font-size: 14px; color: #55636F">{{t.payNote}}</span>
+</div>
+</sc-if>
+<sc-if value="{{stepDone}}" hint-placeholder-val="{{ false }}">
+<div class="modal" role="status" style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start; padding: 12px 0">
+<svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="#009BD5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M8 12.5l2.6 2.5L16 9.5"></path></svg>
+<span style="font-family: 'Readex Pro', sans-serif; font-size: 22px; font-weight: 600">{{t.sent}}</span>
+<span style="color: #3D4A55">{{t.sentText}}</span>
+</div>
+</sc-if>
+</div>
+<div style="padding: 20px 24px; border-top: 1px solid #EDF1F4; display: flex; flex-direction: column; gap: 12px">
+<sc-if value="{{showTotals}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; justify-content: space-between"><span style="color: #55636F">{{t.pieces}}</span><span style="font-weight: 700">{{cartCount}}</span></div>
+<div style="display: flex; justify-content: space-between"><span style="color: #55636F">{{t.total}}</span><span style="font-family: 'Readex Pro', sans-serif; font-weight: 700; font-size: 20px">[—] {{t.iqd}}</span></div>
+</sc-if>
+<sc-if value="{{stepCart}}" hint-placeholder-val="{{ true }}">
+<button type="button" class="btn btn-sky" onClick="{{toCheckout}}" disabled="{{cartEmpty}}" style="border: 0; min-height: 52px">{{t.continue}}</button>
+<a href="https://wa.me/9647XXXXXXXXX" style="text-align: center; font-weight: 700; padding: 10px; text-decoration: none; color: #00739E">{{t.sendCartWa}}</a>
+</sc-if>
+<sc-if value="{{stepCheckout}}" hint-placeholder-val="{{ false }}">
+<button type="button" class="btn btn-sky" onClick="{{placeOrder}}" style="border: 0; min-height: 52px">{{t.confirm}}</button>
+<button type="button" onClick="{{backToCart}}" style="background: transparent; color: #00739E; border: 0; min-height: 44px; font-weight: 700">{{t.backCart}}</button>
+</sc-if>
+<sc-if value="{{stepDone}}" hint-placeholder-val="{{ false }}"><button type="button" class="btn btn-line" onClick="{{finish}}">{{t.keepShopping}}</button></sc-if>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{hasToast}}" hint-placeholder-val="{{ false }}"><div class="toast" role="status" style="background: #101820; color: #fff"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#38B6E6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>{{toast}}</div></sc-if>
+<a class="fab" href="https://wa.me/9647XXXXXXXXX" aria-label="WhatsApp"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.4 7.9L3 21l1.2-4.4A9 9 0 1 1 21 12z"></path></svg></a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2900}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    let lang = 'ar'; try { lang = localStorage.getItem('nh-lang') || 'ar'; } catch (e) {}
+    this.state = { lang, cfg: this.readCfg(), annClosed: false, dep: 'all', sub: 'all', gridOut: false, query: '', sort: 'default', onlyStock: false, cart: {}, bumpN: 0, toast: null, cartOpen: false, step: 'cart', qv: null, qvSize: 0, qvQty: 1, justAdded: null, menu: false };
+  }
+  readCfg() { try { return JSON.parse(localStorage.getItem('nh-site') || '{}') || {}; } catch (e) { return {}; } }
+  componentDidMount() {
+    this.onStore = (e) => { if (e.key === 'nh-site') this.setState({ cfg: this.readCfg() }); if (e.key === 'nh-lang') { try { this.setState({ lang: localStorage.getItem('nh-lang') || 'ar' }); } catch (x) {} } };
+    try { window.addEventListener('storage', this.onStore); } catch (e) {}
+  }
+  componentWillUnmount() { try { window.removeEventListener('storage', this.onStore); } catch (e) {} }
+  notify(m) { clearTimeout(this.tt); this.setState({ toast: m }); this.tt = setTimeout(() => this.setState({ toast: null, justAdded: null }), 2000); }
+  swap(patch) { this.setState({ gridOut: true }); setTimeout(() => this.setState({ ...patch, gridOut: false }), 200); }
+  renderVals() {
+    const s = this.state; const ar = s.lang !== 'en'; const L = (a, e) => (ar ? a : e); const c = s.cfg || {};
+    const t = {
+      newTag: L('جديد', 'NEW'), annAria: L('إعلان منتج جديد', 'New product announcement'), close: L('إغلاق', 'Close'), arrow: L('←', '→'),
+      home: L('النهرين — الرئيسية', 'Al-Nahrain — Home'), homeLabel: L('الرئيسية', 'Home'), storeLabel: L('المتجر', 'Store'), mainNav: L('القائمة الرئيسية', 'Main menu'), menu: L('القائمة', 'Menu'),
+      otherLang: L('English', 'عربي'), otherLangCode: L('en', 'ar'), langAria: L('Switch to English', 'التبديل إلى العربية'), cartAria: L('فتح السلة', 'Open cart'),
+      crumb: L('مسار التصفح', 'Breadcrumb'), title: L('متجر النهرين', 'Al-Nahrain Store'), sub: L('مكائن الإعلان، قطع غيارها، وكل مواد تجهيز الإعلان — الأسعار بالدينار العراقي.', 'Sign-making machines, spare parts and every sign material — prices in Iraqi dinar.'),
+      search: L('ابحث في المتجر', 'Search the store'), searchPh: L('ابحث… مثلاً: طابعة UV، أكريلك، رأس طباعة', 'Search… e.g. UV printer, acrylic, print head'),
+      deps: L('الأقسام', 'Departments'), items: L('منتج', 'items'), cats: L('التصنيفات', 'Categories'), sort: L('الترتيب', 'Sort'), sortNew: L('الأحدث', 'Newest'), sortName: L('حسب الاسم', 'By name'), sortStock: L('المتوفر أولاً', 'In stock first'), onlyStock: L('المتوفر فقط', 'In stock only'),
+      adviceQ: L('تحتاج استشارة قبل الشراء؟', 'Need advice before buying?'), adviceA: L('نساعدك تختار الماكنة المناسبة', 'We\'ll help you choose the right machine'),
+      none: L('لا توجد منتجات مطابقة لبحثك.', 'No products match your search.'), iqd: L('د.ع', 'IQD'), addCart: L('أضف للسلة', 'Add to cart'), less: L('إنقاص الكمية', 'Decrease'), more: L('زيادة الكمية', 'Increase'),
+      includes: L('يشمل: توصيل، تركيب، تدريب · الضمان: [—]', 'Includes delivery, installation and training · Warranty: [—]'),
+      emptyCart: L('السلة فارغة. أضف منتجات من المتجر.', 'Your cart is empty.'), nameCo: L('الاسم / اسم الشركة', 'Name / company'), phone: L('رقم الهاتف', 'Phone'), province: L('المحافظة', 'Province'),
+      address: L('العنوان والملاحظات', 'Address & notes'), addressPh: L('المنطقة، المقاسات، موديل الماكنة لقطع الغيار…', 'Area, sizes, machine model for parts…'),
+      payNote: L('المكائن: نتصل بك لتأكيد السعر والتوصيل والتركيب · المواد: الدفع عند الاستلام', 'Machines: we call to confirm price, delivery and installation · Materials: cash on delivery'),
+      sent: L('تم إرسال طلبك', 'Order sent'), sentText: L('رقم الطلب [#0000]. سيتصل بك فريق المبيعات قريباً.', 'Order [#0000]. Our sales team will call you shortly.'),
+      pieces: L('عدد القطع', 'Items'), total: L('المجموع', 'Total'), continue: L('متابعة الطلب', 'Continue'), sendCartWa: L('أو أرسل السلة عبر واتساب', 'Or send your cart on WhatsApp'),
+      confirm: L('تأكيد الطلب', 'Confirm order'), backCart: L('رجوع إلى السلة', 'Back to cart'), keepShopping: L('متابعة التسوق', 'Keep shopping'),
+      rights: L('© [السنة] النهرين', '© [Year] Al-Nahrain'), admin: L('دخول الإدارة', 'Admin login')
+    };
+    const navItems = [ ['Main.dc.html', L('الرئيسية', 'Home')], ['Store.dc.html', L('المتجر', 'Store')], ['Works.dc.html', L('أعمالنا', 'Our work')], ['News.dc.html', L('الأخبار', 'News')], ['Main.dc.html', L('تواصل معنا', 'Contact')] ]
+      .map((n, i) => ({ href: n[0], label: n[1], cls: 'navlink' + (i === 1 ? ' on' : '') }));
+    const I = {
+      printer: 'M6 9V4h12v5M4 9h16a2 2 0 0 1 2 2v4H2v-4a2 2 0 0 1 2-2zM6 15v5h12v-5M9 18h6', flat: 'M2 14h20v3H2zM4 17v3M20 17v3M6 14V9h12v5M9 9V6h6v3',
+      cnc: 'M3 20h18M5 20V8h14v12M5 8l3-4h8l3 4M12 8v6M10 14h4l-2 3z', laser: 'M4 6h16v12H4zM12 6v5M10 13l2-2 2 2M8 18v2M16 18v2', bend: 'M4 18c0-6 4-10 10-10h6M14 4l6 4-6 4M4 18h4',
+      part: 'M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z', sheet: 'M4 4h16v16H4zM4 9h16M9 4v16',
+      ink: 'M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z', led: 'M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z',
+      roll: 'M5 3h14v14H5zM5 17l3 4h8l3-4', box: 'M3 7l9-4 9 4-9 4zM3 12l9 4 9-4M3 17l9 4 9-4', star: 'M12 3l2.6 5.6 6 .8-4.4 4.2 1.1 6L12 16.8 6.7 19.6l1.1-6L3.4 9.4l6-.8z'
+    };
+    const depDefs = [ { id: 'all', label: L('كل المنتجات', 'All products'), icon: 'M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z' }, { id: 'new', label: L('وصل حديثاً', 'New arrivals'), icon: I.star }, { id: 'mac', label: L('المكائن', 'Machines'), icon: I.printer }, { id: 'part', label: L('قطع الغيار', 'Spare parts'), icon: I.part }, { id: 'mat', label: L('مواد الإعلان', 'Sign materials'), icon: I.box } ];
+    const subDefs = {
+      mac: [ ['solvent', L('طابعات سولفنت', 'Solvent printers')], ['uvroll', L('طابعات UV رول', 'UV roll printers')], ['uvflat', L('طابعات UV فلات', 'UV flatbed printers')], ['cnc', L('مكائن CNC', 'CNC routers')], ['laser', L('مكائن ليزر', 'Laser machines')], ['bend', L('مكائن تعويج الحروف', 'Letter benders')] ],
+      part: [ ['heads', L('رؤوس الطباعة', 'Print heads')], ['mech', L('قطع ميكانيكية', 'Mechanical parts')], ['elec', L('قطع كهربائية', 'Electrical parts')], ['tools', L('أدوات القطع', 'Cutting tools')] ],
+      mat: [ ['acrylic', L('أكريلك', 'Acrylic')], ['foam', L('فوم بورد', 'Foam board')], ['ink', L('أحبار', 'Inks')], ['led', L('إنارة LED', 'LED lighting')], ['flex', L('فلكس', 'Flex')], ['sticker', L('ستيكر وفينيل', 'Sticker & vinyl')], ['alu', L('ألمنيوم وكلادينج', 'Aluminium & cladding')] ]
+    };
+    const subLabel = {}; Object.keys(subDefs).forEach((d) => subDefs[d].forEach((x) => { subLabel[x[0]] = x[1]; }));
+    const M = (id, sub, nA, nE, dA, dE, sizes, st, icon, specs) => ({ id, dep: 'mac', sub, name: L(nA, nE), desc: L(dA, dE), sizes, st, icon, specs, unit: '', machine: true });
+    const P = (id, dep, sub, nA, nE, dA, dE, sizes, st, icon, uA, uE) => ({ id, dep, sub, name: L(nA, nE), desc: L(dA, dE), sizes, st, icon, unit: L(uA, uE), machine: false });
+    const all = [
+      M(1, 'solvent', 'طابعة إيكو سولفنت [الموديل]', 'Eco-solvent printer [model]', 'للفلكس والستيكر والكانفاس.', 'For flex, vinyl and canvas.', ['1.8 m', '3.2 m'], 'ok', I.printer, [[L('عرض الطباعة', 'Print width'), '[—] m'], [L('الرؤوس', 'Heads'), '[—]'], [L('السرعة', 'Speed'), '[—] m²/h']]),
+      M(2, 'solvent', 'طابعة سولفنت صناعية [الموديل]', 'Industrial solvent printer [model]', 'إنتاجية عالية للطباعة الخارجية.', 'High output for outdoor print.', ['3.2 m'], 'low', I.printer, [[L('عرض الطباعة', 'Print width'), '3.2 m'], [L('الرؤوس', 'Heads'), '[—]'], [L('السرعة', 'Speed'), '[—] m²/h']]),
+      M(3, 'uvroll', 'طابعة UV رول [الموديل]', 'UV roll printer [model]', 'تجفيف فوري وألوان ثابتة.', 'Instant curing, lasting colour.', ['1.6 m', '3.2 m'], 'ok', I.printer, [[L('عرض الطباعة', 'Print width'), '[—] m'], [L('الألوان', 'Colours'), 'CMYK + W'], [L('المصابيح', 'Lamps'), 'LED UV']]),
+      M(4, 'uvflat', 'طابعة UV فلات [الموديل]', 'UV flatbed printer [model]', 'طباعة مباشرة على الأكريلك والخشب والمعدن.', 'Direct print on acrylic, wood and metal.', ['250×130 cm'], 'ok', I.flat, [[L('الطاولة', 'Bed'), '[—] cm'], [L('أقصى سماكة', 'Max thickness'), '[—] cm'], [L('الألوان', 'Colours'), 'CMYK + W + V']]),
+      M(5, 'cnc', 'ماكنة CNC راوتر [الموديل]', 'CNC router [model]', 'قص وحفر الأكريلك والفوم والكلادينج.', 'Cuts and carves acrylic, foam and cladding.', ['130×250 cm', '200×300 cm'], 'ok', I.cnc, [[L('مساحة العمل', 'Work area'), '[—] cm'], [L('السبندل', 'Spindle'), '[—] kW'], [L('التحكم', 'Controller'), '[—]']]),
+      M(6, 'laser', 'ماكنة ليزر CO2 [الموديل]', 'CO2 laser [model]', 'قص وحفر دقيق.', 'Precise cutting and engraving.', ['100 W', '150 W'], 'ok', I.laser, [[L('القدرة', 'Power'), '[—] W'], [L('المساحة', 'Area'), '[—] cm'], [L('التبريد', 'Cooling'), L('ماء', 'Water')]]),
+      M(7, 'bend', 'ماكنة تعويج حروف ألمنيوم [الموديل]', 'Aluminium letter bender [model]', 'تشكيل الحروف البارزة آلياً.', 'Automatic channel-letter forming.', [L('ألمنيوم', 'Aluminium'), L('ستانلس', 'Stainless')], 'low', I.bend, [[L('الخامات', 'Materials'), L('ألمنيوم، ستانلس', 'Aluminium, stainless')], [L('عرض الشريط', 'Strip width'), '[—] cm'], [L('البرنامج', 'Software'), '[—]']]),
+      P(20, 'part', 'heads', 'رأس طباعة [الموديل]', 'Print head [model]', 'متوافق مع طابعات [—].', 'Compatible with [—] printers.', ['[model]'], 'low', I.part, '/ قطعة', '/ pc'),
+      P(21, 'part', 'mech', 'حزام وموتور حركة', 'Belt & drive motor', 'للطابعات الرول.', 'For roll printers.', ['[size]'], 'ok', I.part, '/ قطعة', '/ pc'),
+      P(22, 'part', 'elec', 'لوحة تحكم رئيسية', 'Main control board', 'لطابعات [—].', 'For [—] printers.', ['[model]'], 'out', I.part, '/ قطعة', '/ pc'),
+      P(23, 'part', 'tools', 'بتات CNC', 'CNC bits', 'لقص الأكريلك والألمنيوم.', 'For acrylic and aluminium.', ['3 mm', '6 mm'], 'ok', I.part, '/ قطعة', '/ pc'),
+      P(24, 'part', 'elec', 'أنبوب ليزر CO2', 'CO2 laser tube', 'بقدرات مختلفة.', 'Several power ratings.', ['80 W', '100 W'], 'ok', I.laser, '/ قطعة', '/ pc'),
+      P(30, 'mat', 'acrylic', 'لوح أكريلك شفاف وملون', 'Clear & coloured acrylic', 'للحروف البارزة والواجهات.', 'For letters and facades.', ['3 mm', '5 mm', '10 mm'], 'ok', I.sheet, '/ لوح', '/ sheet'),
+      P(31, 'mat', 'foam', 'فوم بورد PVC', 'PVC foam board', 'خفيف ومناسب للطباعة والقص.', 'Light, great for print and cutting.', ['3 mm', '5 mm'], 'ok', I.box, '/ لوح', '/ sheet'),
+      P(32, 'mat', 'ink', 'حبر إيكو سولفنت CMYK', 'Eco-solvent ink CMYK', 'للطابعات كبيرة الحجم.', 'For large-format printers.', ['1 L'], 'low', I.ink, '/ عبوة', '/ bottle'),
+      P(33, 'mat', 'ink', 'حبر UV', 'UV ink', 'للطابعات الرول والفلات.', 'For roll and flatbed printers.', ['1 L'], 'ok', I.ink, '/ عبوة', '/ bottle'),
+      P(34, 'mat', 'led', 'موديول LED ثلاثي', '3-LED module', 'للحروف المضيئة والصناديق.', 'For lit letters and light boxes.', [L('أبيض', 'White'), L('أزرق', 'Blue')], 'ok', I.led, '/ قطعة', '/ pc'),
+      P(35, 'mat', 'led', 'محوّل ١٢ فولت مقاوم للماء', '12 V waterproof driver', 'للاستخدام الخارجي.', 'For outdoor use.', ['200 W', '400 W'], 'ok', I.led, '/ قطعة', '/ pc'),
+      P(36, 'mat', 'flex', 'فلكس أمامي وخلفي الإضاءة', 'Front-lit & back-lit flex', 'للوحات والصناديق المضيئة.', 'For signs and light boxes.', ['1.26 m', '2.2 m', '3.2 m'], 'ok', I.roll, '/ م²', '/ m²'),
+      P(37, 'mat', 'sticker', 'ستيكر وون واي فيجن', 'Vinyl & one-way vision', 'أبيض، شفاف، وللزجاج.', 'White, clear and window film.', ['1.27 m', '1.52 m'], 'low', I.roll, '/ م²', '/ m²'),
+      P(38, 'mat', 'alu', 'كلادينج ألمنيوم', 'Aluminium cladding', 'لكسوة الواجهات.', 'For building facades.', ['122×244 cm'], 'out', I.sheet, '/ لوح', '/ sheet')
+    ];
+    const lc = c.launch || {}; const newId = Number(lc.prod || 4); const showNew = lc.store !== false;
+    const isNew = (p) => showNew && p.id === newId;
+    const stL = { ok: L('متوفر', 'In stock'), low: L('كمية محدودة', 'Limited'), out: L('غير متوفر', 'Out of stock') };
+    const q = s.query.trim().toLowerCase();
+    let list = all.filter((p) => (s.dep === 'all' || (s.dep === 'new' ? isNew(p) : p.dep === s.dep)) && (s.sub === 'all' || p.sub === s.sub) && (!q || p.name.toLowerCase().indexOf(q) !== -1 || subLabel[p.sub].toLowerCase().indexOf(q) !== -1) && (!s.onlyStock || p.st !== 'out'));
+    if (s.sort === 'name') list = list.slice().sort((a, b) => a.name.localeCompare(b.name, ar ? 'ar' : 'en'));
+    if (s.sort === 'stock') { const o = { ok: 0, low: 1, out: 2 }; list = list.slice().sort((a, b) => o[a.st] - o[b.st]); }
+    if (s.sort === 'default') list = list.slice().sort((a, b) => (isNew(b) ? 1 : 0) - (isNew(a) ? 1 : 0));
+    const dec = (p) => ({ ...p, isNew: isNew(p), subLabel: subLabel[p.sub], status: stL[p.st], stClass: 'st-' + p.st, out: p.st === 'out', isMachine: p.machine, ph: L('[صورة: ', '[Photo: ') + p.name + ']',
+      unitLabel: p.machine ? L('· أو اطلب عرض سعر', '· or request a quote') : p.unit, orderLabel: p.machine ? L('اطلب عرض سعر', 'Request a quote') : L('اطلب الآن', 'Order now'), optLabel: p.machine ? L('الموديل / المقاس', 'Model / size') : L('المقاس / النوع', 'Size / type') });
+    const plus = 'M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2M14 4v6M11 7h6'; const check = 'M5 12.5l4.5 4.5L19 7.5';
+    const addItem = (id, qn, name) => { const cc = { ...this.state.cart }; cc[id] = (cc[id] || 0) + qn; this.setState({ cart: cc, bumpN: this.state.bumpN + 1, justAdded: id }); this.notify(L('أُضيف «', 'Added “') + name + L('» إلى السلة', '” to cart')); };
+    const shown = list.map((p, i) => ({ ...dec(p), i, primaryLabel: p.st === 'out' ? stL.out : (p.machine ? L('اطلب عرض سعر', 'Request a quote') : L('اطلب الآن', 'Order now')),
+      addIcon: s.justAdded === p.id ? check : plus, addedClass: s.justAdded === p.id ? 'added' : '', addAria: L('أضف إلى السلة: ', 'Add to cart: ') + p.name,
+      add: () => addItem(p.id, 1, p.name), view: () => this.setState({ qv: p.id, qvSize: 0, qvQty: 1 }) }));
+    const deps = depDefs.filter((d) => d.id !== 'new' || showNew).map((d) => ({ label: d.label, icon: d.icon, n: d.id === 'all' ? all.length : (d.id === 'new' ? all.filter(isNew).length : all.filter((p) => p.dep === d.id).length), pressed: d.id === s.dep ? 'true' : 'false',
+      pick: () => { if (d.id !== this.state.dep) this.swap({ dep: d.id, sub: 'all' }); } }));
+    const subsSrc = subDefs[s.dep] || [];
+    const inDep = all.filter((p) => s.dep === 'all' || (s.dep === 'new' ? isNew(p) : p.dep === s.dep));
+    const subs = [ { label: L('الكل', 'All'), id: 'all' } ].concat(subsSrc.map((x) => ({ id: x[0], label: x[1] })))
+      .concat(s.dep === 'all' ? depDefs.filter((d) => d.id === 'mac' || d.id === 'part' || d.id === 'mat').map((d) => ({ id: 'dep:' + d.id, label: d.label })) : [])
+      .map((x) => ({ label: x.label, n: x.id === 'all' ? inDep.length : (x.id.indexOf('dep:') === 0 ? all.filter((p) => p.dep === x.id.slice(4)).length : all.filter((p) => p.sub === x.id).length), pressed: x.id === s.sub ? 'true' : 'false',
+        pick: () => { if (x.id.indexOf('dep:') === 0) this.swap({ dep: x.id.slice(4), sub: 'all' }); else if (x.id !== this.state.sub) this.swap({ sub: x.id }); } }));
+    const depLabel = (depDefs.find((d) => d.id === s.dep) || depDefs[0]).label;
+    const qvP = all.find((p) => p.id === s.qv) || all[0]; const qv = dec(qvP);
+    const qvSizes = qvP.sizes.map((z, i) => ({ label: z, pressed: i === s.qvSize ? 'true' : 'false', pick: () => this.setState({ qvSize: i }) }));
+    const ids = Object.keys(s.cart).filter((k) => s.cart[k] > 0);
+    const cartItems = ids.map((k, i) => { const p = all.find((x) => String(x.id) === k); return { i, name: p.name, note: p.machine ? L('طلب عرض سعر', 'Quote request') : '[—] ' + t.iqd + ' ' + p.unit, qty: s.cart[k],
+      inc: () => { const cc = { ...this.state.cart }; cc[k] += 1; this.setState({ cart: cc }); }, dec: () => { const cc = { ...this.state.cart }; cc[k] -= 1; if (cc[k] <= 0) delete cc[k]; this.setState({ cart: cc }); } }; });
+    const cartCount = ids.reduce((n, k) => n + s.cart[k], 0);
+    const titles = { cart: L('السلة وطلبات الأسعار', 'Cart & quote requests'), checkout: L('معلومات الطلب', 'Your details'), done: L('تم الطلب', 'Done') };
+    const govs = ar ? ['بغداد', 'البصرة', 'نينوى', 'أربيل', 'النجف', 'كربلاء', 'بابل', 'الأنبار', 'ديالى', 'كركوك', 'صلاح الدين', 'واسط', 'ذي قار', 'ميسان', 'المثنى', 'القادسية', 'دهوك', 'السليمانية']
+      : ['Baghdad', 'Basra', 'Nineveh', 'Erbil', 'Najaf', 'Karbala', 'Babylon', 'Anbar', 'Diyala', 'Kirkuk', 'Salah al-Din', 'Wasit', 'Dhi Qar', 'Maysan', 'Muthanna', 'Qadisiyah', 'Duhok', 'Sulaymaniyah'];
+    const ann = c.ann || {}; const newP = all.find((p) => p.id === newId) || all[3];
+    const setLang = (l) => { this.setState({ lang: l }); try { localStorage.setItem('nh-lang', l); } catch (e) {} };
+    return {
+      t, lang: ar ? 'ar' : 'en', dir: ar ? 'rtl' : 'ltr', toggleLang: () => setLang(this.state.lang === 'en' ? 'ar' : 'en'), navItems, govs,
+      annOn: ann.on !== false && !s.annClosed, annText: (ar ? ann.ar : ann.en) || L('جديد: ', 'New: ') + newP.name + L(' — اكتشف المواصفات', ' — see the specs'),
+      closeAnn: () => this.setState({ annClosed: true }), openNew: () => this.setState({ qv: newP.id, qvSize: 0, qvQty: 1 }),
+      menuOpen: s.menu, menuExpanded: s.menu ? 'true' : 'false', toggleMenu: () => this.setState({ menu: !this.state.menu }),
+      query: s.query, onlyStock: s.onlyStock, deps, subs, depTitle: s.dep === 'all' ? t.deps : depLabel,
+      listTitle: s.sub === 'all' ? depLabel : subLabel[s.sub], shown, count: shown.length, empty: shown.length === 0, gridOut: s.gridOut ? 'out' : '',
+      onSearch: (e) => this.setState({ query: e.target.value }), onSort: (e) => this.setState({ sort: e.target.value }), toggleStock: () => this.setState({ onlyStock: !this.state.onlyStock }),
+      bumpClass: s.bumpN === 0 ? '' : (s.bumpN % 2 ? 'bump' : 'bump2'), toast: s.toast, hasToast: !!s.toast,
+      qvOpen: s.qv !== null, qv, qvSizes, qvQty: s.qvQty, qvSpecs: (qvP.specs || []).map((r) => ({ k: r[0], v: r[1] })),
+      qvInc: () => this.setState({ qvQty: this.state.qvQty + 1 }), qvDec: () => this.setState({ qvQty: Math.max(1, this.state.qvQty - 1) }),
+      qvAdd: () => { addItem(qvP.id, this.state.qvQty, qvP.name); this.setState({ qv: null }); },
+      qvOrder: () => { const cc = { ...this.state.cart }; cc[qvP.id] = (cc[qvP.id] || 0) + this.state.qvQty; this.setState({ cart: cc, qv: null, cartOpen: true, step: 'checkout' }); },
+      closeQv: () => this.setState({ qv: null }),
+      cartCount, cartItems, cartEmpty: cartCount === 0, cartOpen: s.cartOpen, drawerTitle: titles[s.step],
+      stepCart: s.step === 'cart', stepCheckout: s.step === 'checkout', stepDone: s.step === 'done', showTotals: s.step !== 'done',
+      openCart: () => this.setState({ cartOpen: true }), closeCart: () => this.setState({ cartOpen: false, step: this.state.step === 'done' ? 'cart' : this.state.step }),
+      toCheckout: () => this.setState({ step: 'checkout' }), backToCart: () => this.setState({ step: 'cart' }),
+      placeOrder: () => this.setState({ step: 'done', cart: {} }), finish: () => this.setState({ step: 'cart', cartOpen: false })
+    };
+  }
+}
+</script>
+</body>
+</html>
